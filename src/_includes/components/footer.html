@@ -1,0 +1,358 @@
+<style>
+  :root {
+    --pd-primary: #292524;
+    --pd-accent: #B45309;
+    --pd-light: #F5F0E8;
+    --pd-white: #ffffff;
+    --pd-font-display: 'Barlow Condensed', sans-serif;
+    --pd-font-body: 'Barlow', sans-serif;
+  }
+
+  .pd-footer {
+    background: var(--pd-primary);
+    color: var(--pd-light);
+    font-family: var(--pd-font-body);
+    border-top: 4px solid var(--pd-accent);
+  }
+
+  .pd-footer a {
+    color: var(--pd-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .pd-footer a:hover { color: var(--pd-accent); }
+
+  /* ── Main Grid ── */
+  .pd-footer__main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2.5rem 2rem;
+  }
+
+  /* Column headings */
+  .pd-footer__heading {
+    font-family: var(--pd-font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--pd-white);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--pd-accent);
+    display: inline-block;
+  }
+
+  /* About column */
+  .pd-footer__about p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: rgba(245, 240, 232, 0.8);
+    margin-bottom: 1rem;
+  }
+
+  .pd-footer__logo-text {
+    font-family: var(--pd-font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--pd-white);
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Quick Links & Services */
+  .pd-footer__links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .pd-footer__links li a {
+    font-size: 0.92rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgba(245, 240, 232, 0.8);
+    transition: color 0.2s, gap 0.2s;
+  }
+
+  .pd-footer__links li a::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--pd-accent);
+    border-radius: 1px;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  .pd-footer__links li a:hover {
+    color: var(--pd-white);
+  }
+
+  .pd-footer__links li a:hover::before {
+    transform: scale(1.4);
+  }
+
+  /* Contact column */
+  .pd-footer__contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .pd-footer__contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
+    font-size: 0.92rem;
+    color: rgba(245, 240, 232, 0.8);
+    line-height: 1.45;
+  }
+
+  .pd-footer__contact-list li svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--pd-accent);
+  }
+
+  .pd-footer__contact-list li a {
+    color: rgba(245, 240, 232, 0.8);
+  }
+
+  .pd-footer__contact-list li a:hover { color: var(--pd-accent); }
+
+  .pd-footer__hours {
+    font-size: 0.82rem;
+    opacity: 0.7;
+    margin-top: 0.15rem;
+    display: block;
+  }
+
+  /* ── Bottom Bar ── */
+  .pd-footer__bottom {
+    border-top: 1px solid rgba(245, 240, 232, 0.12);
+    padding: 1.25rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .pd-footer__bottom-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  /* Socials */
+  .pd-footer__socials {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .pd-footer__socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: rgba(245, 240, 232, 0.08);
+    border: 1px solid rgba(245, 240, 232, 0.18);
+    border-radius: 4px;
+    color: var(--pd-light);
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+  }
+
+  .pd-footer__socials a:hover {
+    background: var(--pd-accent);
+    border-color: var(--pd-accent);
+    color: var(--pd-white);
+  }
+
+  /* Copyright */
+  .pd-footer__copy {
+    font-size: 0.82rem;
+    color: rgba(245, 240, 232, 0.55);
+    line-height: 1.5;
+    text-align: right;
+  }
+
+  .pd-footer__copy a {
+    color: rgba(245, 240, 232, 0.55);
+    font-weight: 600;
+  }
+
+  .pd-footer__copy a:hover { color: var(--pd-accent); }
+
+  .pd-footer__credit {
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 0.2rem;
+    opacity: 0.6;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .pd-footer__main {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .pd-footer__bottom-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .pd-footer__copy { text-align: left; }
+  }
+</style>
+
+<footer class="pd-footer" role="contentinfo">
+
+  <div class="pd-footer__main">
+
+    <!-- Column 1: About -->
+    <div class="pd-footer__about">
+      <p>Your local experts in driveways, patios, groundworks and pipe laying across Tipperary and surrounding areas. Built on solid ground — every job, every time.</p>
+      <p>Fully insured. Family run. Quality guaranteed.</p>
+    </div>
+<!--
+        <div class="pd-footer__col">
+      <span class="pd-footer__heading">Quick Links</span>
+      <ul class="pd-footer__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/driveways-tipperary/">Driveways</a></li>
+        <li><a href="/patios-tipperary">Patios</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    -->
+    <!-- Column 2: Quick Links -->
+    <div class="pd-footer__col">
+      <span class="pd-footer__heading">Quick Links</span>
+      <ul class="pd-footer__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Services</a></li>
+        <li><a href="/">About</a></li>
+        <li><a href="/">Driveways</a></li>
+        <li><a href="/">Patios</a></li>
+        <li><a href="/">Contact</a></li>
+      </ul>
+    </div>
+
+    <!--
+        <div class="pd-footer__col">
+      <span class="pd-footer__heading">Our Services</span>
+      <ul class="pd-footer__links">
+        <li><a href="/driveways-tipperary/">Driveways</a></li>
+        <li><a href="/patios-tipperary">Patios</a></li>
+        <li><a href="/services/">Groundworks</a></li>
+        <li><a href="/services/">Pipe Laying</a></li>
+        <li><a href="/services/">Site Clearance</a></li>
+        <li><a href="/contact/">Free Quote</a></li>
+      </ul>
+    </div>
+    -->
+    <!-- Column 3: Services -->
+    <div class="pd-footer__col">
+      <span class="pd-footer__heading">Our Services</span>
+      <ul class="pd-footer__links">
+        <li><a href="/">Driveways</a></li>
+        <li><a href="/">Patios</a></li>
+        <li><a href="/">Groundworks</a></li>
+        <li><a href="/">Pipe Laying</a></li>
+        <li><a href="/">Site Clearance</a></li>
+        <li><a href="/">Free Quote</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Contact -->
+    <div class="pd-footer__col">
+      <span class="pd-footer__heading">Contact Us</span>
+      <ul class="pd-footer__contact-list">
+        <li>
+          <!-- Phone -->
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.18 21 3 13.82 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z" fill="currentColor"/>
+          </svg>
+          <a href="tel:+353873566934" aria-label="Call Tipperary Groundworks">+353 87 356 6934</a>
+        </li>
+        <li>
+          <!-- Email -->
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <a href="mailto:tipperarygroundworks@gmail.com">tipperarygroundworks@gmail.com</a>
+        </li>
+        <li>
+          <!-- Location -->
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z" fill="currentColor"/>
+          </svg>
+          <span>Tipperary, Ireland</span>
+        </li>
+        <li>
+          <!-- Hours -->
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+            <polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>
+            <!-- VERIFY hours -->
+            Mon – Fri: 7:30am – 6:00pm<br>
+            <span class="pd-footer__hours">Sat: 8:00am – 2:00pm · Sun: Closed</span>
+          </span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="pd-footer__bottom">
+    <div class="pd-footer__bottom-inner">
+
+      <!-- Socials -->
+      <div class="pd-footer__socials" aria-label="Social media links">
+        <!-- Facebook -->
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M22 12a10 10 0 10-11.563 9.878v-6.988h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988A10.002 10.002 0 0022 12z"/>
+          </svg>
+        </a>
+        <!-- Instagram -->
+        <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.337 3.608 1.312.975.975 1.25 2.242 1.312 3.608.058 1.266.07 1.646.07 4.847s-.012 3.581-.07 4.847c-.062 1.366-.337 2.633-1.312 3.608-.975.975-2.242 1.25-3.608 1.312-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.337-3.608-1.312C2.567 19.483 2.292 18.216 2.23 16.85 2.172 15.584 2.16 15.204 2.16 12s.012-3.584.07-4.85c.062-1.366.337-2.633 1.312-3.608C4.517 2.567 5.784 2.292 7.15 2.23 8.416 2.172 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.333.014 7.053.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.053.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.856.601 3.698 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.856-.085 3.698-.601 5.038-1.942 1.341-1.34 1.857-3.182 1.942-5.038C23.986 15.668 24 15.259 24 12s-.014-3.667-.072-4.947c-.085-1.856-.601-3.698-1.942-5.039C20.646.673 18.804.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+          </svg>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/353873566934" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Copyright & Credit -->
+      <div class="pd-footer__copy">
+        <span>&copy; <script>document.write(new Date().getFullYear())</script> Tipperary Groundworks. All rights reserved.</span>
+        <span class="pd-footer__credit">Website by <a href="https://acutis.ie" target="_blank" rel="noopener noreferrer">Acutis</a></span>
+      </div>
+
+    </div>
+  </div>
+
+</footer>

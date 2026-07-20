@@ -1,0 +1,737 @@
+---
+title: 'Contact Tipperary Groundworks | Free Quote'
+description: 'Contact Tipperary Groundworks for a fast free quote on driveways, patios, groundworks & pipe laying across Tipperary. Call or fill in our quick form today.'
+preloadImg: '/assets/images/contact-hero.jpg'
+permalink: '/contact/'
+eleventyNavigation:
+  key: Contact
+  order: 500
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<style>
+  :root {
+    --pd-primary: #292524;
+    --pd-accent: #B45309;
+    --pd-light: #F5F0E8;
+    --pd-white: #ffffff;
+    --pd-font-display: 'Barlow Condensed', sans-serif;
+    --pd-font-body: 'Barlow', sans-serif;
+  }
+
+  .tipperary-groundworks-contact *,
+  .tipperary-groundworks-contact *::before,
+  .tipperary-groundworks-contact *::after {
+    box-sizing: border-box;
+  }
+
+  .tipperary-groundworks-contact {
+    font-family: var(--pd-font-body);
+    color: var(--pd-primary);
+    background: var(--pd-white);
+  }
+
+  /* ── HERO ── */
+  .tipperary-groundworks-contact .contact-hero {
+    position: relative;
+    background: var(--pd-primary);
+    background-image: url('/assets/images/contact-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px 100px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .tipperary-groundworks-contact .contact-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(41, 37, 36, 0.75);
+  }
+
+  .tipperary-groundworks-contact .contact-hero__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .tipperary-groundworks-contact .contact-hero__eyebrow {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    border-left: 4px solid var(--pd-accent);
+    padding-left: 10px;
+    margin-bottom: 16px;
+  }
+
+  .tipperary-groundworks-contact .contact-hero h1 {
+    font-family: var(--pd-font-display);
+    font-size: clamp(2.4rem, 6vw, 3.8rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--pd-white);
+    line-height: 1.1;
+    margin: 0 0 16px;
+  }
+
+  .tipperary-groundworks-contact .contact-hero__sub {
+    font-size: 1.1rem;
+    color: #e5e0d8;
+    margin: 0;
+    max-width: 520px;
+    margin-inline: auto;
+  }
+
+  /* ── HERO CLIP ── */
+  .tipperary-groundworks-contact .contact-hero {
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+    margin-bottom: -30px;
+  }
+
+  /* ── MAIN CONTENT ── */
+  .tipperary-groundworks-contact .contact-main {
+    background: var(--pd-white);
+    padding: 80px 20px 60px;
+  }
+
+  .tipperary-groundworks-contact .contact-main__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  /* ── FORM COLUMN ── */
+  .tipperary-groundworks-contact .form-col__label {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    border-left: 4px solid var(--pd-accent);
+    padding-left: 10px;
+    margin-bottom: 14px;
+  }
+
+  .tipperary-groundworks-contact .form-col h2 {
+    font-family: var(--pd-font-display);
+    font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--pd-primary);
+    margin: 0 0 24px;
+    line-height: 1.1;
+  }
+
+  .tipperary-groundworks-contact .quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .tipperary-groundworks-contact .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .tipperary-groundworks-contact .form-group label {
+    font-family: var(--pd-font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--pd-primary);
+  }
+
+  .tipperary-groundworks-contact .form-group input,
+  .tipperary-groundworks-contact .form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    font-family: var(--pd-font-body);
+    font-size: 1rem;
+    color: var(--pd-primary);
+    background: var(--pd-white);
+    border: 2px solid #d6cfc6;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .tipperary-groundworks-contact .form-group input:focus,
+  .tipperary-groundworks-contact .form-group textarea:focus {
+    outline: none;
+    border-color: var(--pd-accent);
+  }
+
+  .tipperary-groundworks-contact .form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+  }
+
+  .tipperary-groundworks-contact .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .tipperary-groundworks-contact .btn-submit {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--pd-white);
+    background: var(--pd-accent);
+    border: none;
+    border-radius: 4px;
+    padding: 16px 32px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    align-self: flex-start;
+    width: 100%;
+  }
+
+  .tipperary-groundworks-contact .btn-submit:hover {
+    background: #92400e;
+    transform: translateY(-2px);
+  }
+
+  .tipperary-groundworks-contact .btn-submit:focus-visible {
+    outline: 3px solid var(--pd-accent);
+    outline-offset: 3px;
+  }
+
+  /* ── DETAILS CARD ── */
+  .tipperary-groundworks-contact .details-card {
+    background: var(--pd-primary);
+    border-radius: 4px;
+    padding: 36px 28px;
+    color: var(--pd-white);
+    border-top: 4px solid var(--pd-accent);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+
+  .tipperary-groundworks-contact .details-card__eyebrow {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    border-left: 4px solid var(--pd-accent);
+    padding-left: 10px;
+    margin-bottom: 14px;
+  }
+
+  .tipperary-groundworks-contact .details-card h2 {
+    font-family: var(--pd-font-display);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--pd-white);
+    margin: 0 0 28px;
+    line-height: 1.1;
+  }
+
+  .tipperary-groundworks-contact .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .tipperary-groundworks-contact .contact-item:last-child {
+    border-bottom: none;
+  }
+
+  .tipperary-groundworks-contact .contact-item__icon {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    background: var(--pd-accent);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .tipperary-groundworks-contact .contact-item__content {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .tipperary-groundworks-contact .contact-item__label {
+    font-family: var(--pd-font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #b8ad9e;
+  }
+
+  .tipperary-groundworks-contact .contact-item__value {
+    font-size: 1rem;
+    color: var(--pd-white);
+    font-weight: 600;
+  }
+
+  .tipperary-groundworks-contact .contact-item__value a {
+    color: var(--pd-white);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .tipperary-groundworks-contact .contact-item__value a:hover {
+    color: #f8c77a;
+  }
+
+  .tipperary-groundworks-contact .whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--pd-font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--pd-primary);
+    background: #25D366;
+    border-radius: 4px;
+    padding: 10px 18px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background 0.2s, transform 0.15s;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tipperary-groundworks-contact .whatsapp-btn:hover {
+    background: #1aab52;
+    transform: translateY(-2px);
+  }
+
+  /* ── MAP ── */
+  .tipperary-groundworks-contact .contact-map {
+    background: var(--pd-light);
+    padding: 60px 20px;
+  }
+
+  .tipperary-groundworks-contact .contact-map__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .tipperary-groundworks-contact .contact-map__eyebrow {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    border-left: 4px solid var(--pd-accent);
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .tipperary-groundworks-contact .contact-map h2 {
+    font-family: var(--pd-font-display);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--pd-primary);
+    margin: 0 0 24px;
+  }
+
+  .tipperary-groundworks-contact .map-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 50%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 2px solid #d6cfc6;
+    background: #e8e3db;
+  }
+
+  .tipperary-groundworks-contact .map-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .tipperary-groundworks-contact .map-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pd-font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #8a7e74;
+  }
+
+  /* ── SERVICE AREA STRIP ── */
+  .tipperary-groundworks-contact .area-strip {
+    background: var(--pd-primary);
+    padding: 48px 20px;
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+    margin-top: -20px;
+  }
+
+  .tipperary-groundworks-contact .area-strip__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .tipperary-groundworks-contact .area-strip__eyebrow {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    border-left: 4px solid var(--pd-accent);
+    padding-left: 10px;
+    margin-bottom: 14px;
+  }
+
+  .tipperary-groundworks-contact .area-strip h2 {
+    font-family: var(--pd-font-display);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--pd-white);
+    margin: 0 0 20px;
+  }
+
+  .tipperary-groundworks-contact .town-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    list-style: none;
+    margin: 0 0 28px;
+    padding: 0;
+  }
+
+  .tipperary-groundworks-contact .town-list li {
+    font-family: var(--pd-font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--pd-white);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 4px;
+    padding: 7px 16px;
+  }
+
+  .tipperary-groundworks-contact .btn-cta {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--pd-white);
+    background: var(--pd-accent);
+    border-radius: 4px;
+    padding: 16px 36px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    border: none;
+  }
+
+  .tipperary-groundworks-contact .btn-cta:hover {
+    background: #92400e;
+    transform: translateY(-2px);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (min-width: 768px) {
+    .tipperary-groundworks-contact .contact-main__inner {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+
+    .tipperary-groundworks-contact .btn-submit {
+      width: auto;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .tipperary-groundworks-contact .contact-main__inner {
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+    }
+
+    .tipperary-groundworks-contact .contact-hero {
+      padding: 110px 20px 140px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tipperary-groundworks-contact .btn-submit,
+    .tipperary-groundworks-contact .btn-cta,
+    .tipperary-groundworks-contact .whatsapp-btn {
+      transition: none;
+    }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Tipperary Groundworks",
+  "url": "https://tipperarygroundworks.ie/contact/",
+  "description": "Contact Tipperary Groundworks for a fast free quote on driveways, patios, groundworks and pipe laying across County Tipperary.",
+  "mainEntity": {
+    "@type": "LocalBusiness",
+    "name": "Tipperary Groundworks",
+    "description": "Tipperary's Trusted Groundworks Team — driveways, patios, groundworks and pipe laying across County Tipperary.",
+    "telephone": "+353873566934",
+    "email": "tipperarygroundworks@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tipperary",
+      "addressCountry": "IE"
+    },
+    "url": "https://tipperarygroundworks.ie",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "13:00"
+      }
+    ],
+    "areaServed": ["Tipperary","Clonmel","Nenagh","Thurles","Carrick-on-Suir","Cahir","Roscrea","Templemore","Cashel","Newport"]
+  }
+}
+</script>
+
+<div class="tipperary-groundworks-contact">
+
+  <!-- HERO -->
+  <section class="contact-hero" aria-labelledby="contact-hero-heading">
+    <div class="contact-hero__inner">
+      <span class="contact-hero__eyebrow">Fast Free Quotes</span>
+      <h1 id="contact-hero-heading">Get Your Fast Free Quote</h1>
+      <p class="contact-hero__sub">We typically respond within a few hours. Fill in the form or give us a ring — we're ready to get started.</p>
+    </div>
+  </section>
+
+  <!-- FORM + DETAILS -->
+  <section class="contact-main" aria-label="Contact form and details">
+    <div class="contact-main__inner">
+
+      <!-- LEFT: FORM -->
+      <div class="form-col">
+        <span class="form-col__label">Send Us a Message</span>
+        <h2 id="quote-form-heading">Tell Us About Your Project</h2>
+
+        <form name="quote-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-labelledby="quote-form-heading">
+          <input type="hidden" name="form-name" value="quote-contact">
+          <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+
+          <div class="quote-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Full Name</label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                  autocomplete="name"
+                >
+              </div>
+              <div class="form-group">
+                <label for="contact-phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="contact-phone"
+                  name="phone"
+                  placeholder="087 000 0000"
+                  required
+                  autocomplete="tel"
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input
+                type="email"
+                id="contact-email"
+                name="email"
+                placeholder="you@example.com"
+                required
+                autocomplete="email"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="contact-eircode">Postcode / Eircode</label>
+              <input
+                type="text"
+                id="contact-eircode"
+                name="eircode"
+                placeholder="e.g. E34 XY01"
+                required
+                autocomplete="postal-code"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Tell Us About Your Project</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                placeholder="Driveway, patio, groundworks — give us the details and we'll come back with a price."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Send My Quote Request</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- RIGHT: DETAILS CARD -->
+      <div class="details-col">
+        <div class="details-card">
+          <span class="details-card__eyebrow">Contact Details</span>
+          <h2>Reach Us Directly</h2>
+
+          <div class="contact-item">
+            <div class="contact-item__icon" aria-hidden="true">📞</div>
+            <div class="contact-item__content">
+              <span class="contact-item__label">Phone</span>
+              <span class="contact-item__value">
+                <a href="tel:+353873566934">087 356 6934</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon" aria-hidden="true">✉️</div>
+            <div class="contact-item__content">
+              <span class="contact-item__label">Email</span>
+              <span class="contact-item__value">
+                <a href="mailto:tipperarygroundworks@gmail.com">tipperarygroundworks@gmail.com</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon" aria-hidden="true">📍</div>
+            <div class="contact-item__content">
+              <span class="contact-item__label">Location</span>
+              <span class="contact-item__value">Tipperary, Ireland</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon" aria-hidden="true">🕐</div>
+            <div class="contact-item__content">
+              <span class="contact-item__label">Business Hours</span><!-- VERIFY hours -->
+              <span class="contact-item__value">Mon–Fri: 8am – 6pm<br>Sat: 9am – 1pm<br>Sun: Closed</span>
+            </div>
+          </div>
+
+          <a
+            href="https://wa.me/353873566934"
+            class="whatsapp-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat with us on WhatsApp"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="contact-map" aria-label="Our location map">
+    <div class="contact-map__inner">
+      <span class="contact-map__eyebrow">Find Us</span>
+      <h2>We Work Across County Tipperary</h2>
+      <div class="map-embed">
+        <!-- PASTE GOOGLE MAPS EMBED IFRAME HERE -->
+        <div class="map-placeholder">Map Coming Soon</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA STRIP -->
+  <section class="area-strip" aria-label="Service area towns">
+    <div class="area-strip__inner">
+      <span class="area-strip__eyebrow">Where We Work</span>
+      <h2>Covering All of Tipperary</h2>
+      <ul class="town-list" aria-label="Towns we serve">
+        <li>Tipperary Town</li>
+        <li>Clonmel</li>
+        <li>Nenagh</li>
+        <li>Thurles</li>
+        <li>Carrick-on-Suir</li>
+        <li>Cahir</li>
+        <li>Roscrea</li>
+        <li>Templemore</li>
+        <li>Cashel</li>
+        <li>Newport</li>
+      </ul>
+      <a href="tel:+353873566934" class="btn-cta">Call Today — 087 356 6934</a>
+    </div>
+  </section>
+
+</div>
+{% endblock %}

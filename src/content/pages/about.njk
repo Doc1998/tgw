@@ -1,0 +1,651 @@
+---
+title: 'About Tipperary Groundworks | Our Story'
+description: 'Learn about Tipperary Groundworks — your trusted local team for driveways, patios & groundworks across County Tipperary. Years of experience, real results.'
+preloadImg: '/assets/images/general-ground.jpeg'
+permalink: '/about/'
+eleventyNavigation:
+  key: About
+  order: 300
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<style>
+  :root {
+    --pd-primary: #292524;
+    --pd-accent: #B45309;
+    --pd-light: #F5F0E8;
+    --pd-white: #ffffff;
+    --pd-font-display: 'Barlow Condensed', sans-serif;
+    --pd-font-body: 'Barlow', sans-serif;
+  }
+
+  .tipperary-groundworks-about *,
+  .tipperary-groundworks-about *::before,
+  .tipperary-groundworks-about *::after {
+    box-sizing: border-box;
+  }
+
+  .tipperary-groundworks-about {
+    font-family: var(--pd-font-body);
+    color: var(--pd-primary);
+    background: var(--pd-white);
+  }
+
+  /* ── HERO ── */
+  .tipperary-groundworks-about .about-hero {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: var(--pd-primary);
+  }
+
+  .tipperary-groundworks-about .about-hero__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.45;
+  }
+
+  .tipperary-groundworks-about .about-hero__content {
+    position: relative;
+    z-index: 2;
+    padding: 3rem 1.25rem 2.5rem;
+    max-width: 860px;
+  }
+
+  .tipperary-groundworks-about .about-hero__eyebrow {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    border-left: 3px solid var(--pd-accent);
+    padding-left: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tipperary-groundworks-about .about-hero h1 {
+    font-family: var(--pd-font-display);
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--pd-white);
+    margin: 0 0 1rem;
+    text-transform: uppercase;
+  }
+
+  .tipperary-groundworks-about .about-hero__sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.82);
+    max-width: 520px;
+    line-height: 1.55;
+  }
+
+  /* ── STORY ── */
+  .tipperary-groundworks-about .about-story {
+    background: var(--pd-white);
+    padding: 4rem 1.25rem;
+  }
+
+  .tipperary-groundworks-about .about-story__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .tipperary-groundworks-about .about-story__img-wrap {
+    position: relative;
+  }
+
+  .tipperary-groundworks-about .about-story__img-wrap::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 60%;
+    height: 60%;
+    border: 3px solid var(--pd-accent);
+    z-index: 0;
+  }
+
+  .tipperary-groundworks-about .about-story__img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+  }
+
+  .tipperary-groundworks-about .about-story__copy .eyebrow {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    border-left: 3px solid var(--pd-accent);
+    padding-left: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tipperary-groundworks-about .about-story__copy h2 {
+    font-family: var(--pd-font-display);
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin: 0 0 1rem;
+  }
+
+  .tipperary-groundworks-about .about-story__copy p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #44403c;
+    margin-bottom: 1rem;
+  }
+
+  /* ── GUARANTEES ── */
+  .tipperary-groundworks-about .about-guarantees {
+    background: var(--pd-primary);
+    padding: 4rem 1.25rem;
+    clip-path: polygon(0 0, 100% 2.5rem, 100% 100%, 0 100%);
+    padding-top: 5.5rem;
+  }
+
+  .tipperary-groundworks-about .about-guarantees__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .tipperary-groundworks-about .about-guarantees .eyebrow {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    border-left: 3px solid var(--pd-accent);
+    padding-left: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tipperary-groundworks-about .about-guarantees h2 {
+    font-family: var(--pd-font-display);
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--pd-white);
+    margin: 0 0 2rem;
+    line-height: 1.1;
+  }
+
+  .tipperary-groundworks-about .guarantees-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+  }
+
+  .tipperary-groundworks-about .guarantee-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-top: 3px solid var(--pd-accent);
+    border-radius: 4px;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .tipperary-groundworks-about .guarantee-card__icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+
+  .tipperary-groundworks-about .guarantee-card h3 {
+    font-family: var(--pd-font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--pd-white);
+    margin: 0 0 0.4rem;
+  }
+
+  .tipperary-groundworks-about .guarantee-card p {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* ── TESTIMONIAL STRIP ── */
+  .tipperary-groundworks-about .about-testimonials {
+    background: var(--pd-light);
+    padding: 4rem 1.25rem;
+  }
+
+  .tipperary-groundworks-about .about-testimonials__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .tipperary-groundworks-about .about-testimonials .eyebrow {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    border-left: 3px solid var(--pd-accent);
+    padding-left: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tipperary-groundworks-about .about-testimonials h2 {
+    font-family: var(--pd-font-display);
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 2rem;
+  }
+
+  .tipperary-groundworks-about .testimonials-grid {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .tipperary-groundworks-about .testimonial-card {
+    background: var(--pd-white);
+    border-radius: 4px;
+    border-left: 4px solid var(--pd-accent);
+    padding: 1.5rem 1.25rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+  }
+
+  .tipperary-groundworks-about .testimonial-card__stars {
+    color: #FBBF24;
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .tipperary-groundworks-about .testimonial-card blockquote {
+    margin: 0 0 0.75rem;
+    font-size: 0.96rem;
+    line-height: 1.65;
+    color: #44403c;
+    font-style: italic;
+  }
+
+  .tipperary-groundworks-about .testimonial-card__author {
+    font-family: var(--pd-font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--pd-primary);
+  }
+
+  /* ── AREAS ── */
+  .tipperary-groundworks-about .about-areas {
+    background: var(--pd-white);
+    padding: 4rem 1.25rem;
+  }
+
+  .tipperary-groundworks-about .about-areas__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .tipperary-groundworks-about .about-areas .eyebrow {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    border-left: 3px solid var(--pd-accent);
+    padding-left: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tipperary-groundworks-about .about-areas h2 {
+    font-family: var(--pd-font-display);
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 0.75rem;
+  }
+
+  .tipperary-groundworks-about .about-areas__intro {
+    font-size: 1rem;
+    color: #44403c;
+    line-height: 1.65;
+    max-width: 680px;
+    margin-bottom: 1.75rem;
+  }
+
+  .tipperary-groundworks-about .areas-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .tipperary-groundworks-about .area-chip {
+    font-family: var(--pd-font-display);
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    background: var(--pd-light);
+    border: 1px solid #d6cfc4;
+    border-left: 3px solid var(--pd-accent);
+    padding: 0.45rem 0.9rem;
+    border-radius: 2px;
+    color: var(--pd-primary);
+  }
+
+  /* ── CTA BAND ── */
+  .tipperary-groundworks-about .about-cta {
+    background: var(--pd-accent);
+    padding: 3.5rem 1.25rem;
+    clip-path: polygon(0 2rem, 100% 0, 100% 100%, 0 100%);
+    padding-top: 5rem;
+  }
+
+  .tipperary-groundworks-about .about-cta__inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+
+  .tipperary-groundworks-about .about-cta h2 {
+    font-family: var(--pd-font-display);
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--pd-white);
+    line-height: 1.05;
+    margin: 0;
+  }
+
+  .tipperary-groundworks-about .about-cta p {
+    color: rgba(255,255,255,0.88);
+    font-size: 1.02rem;
+    line-height: 1.55;
+    margin: 0;
+    max-width: 520px;
+  }
+
+  .tipperary-groundworks-about .btn {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.85rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .tipperary-groundworks-about .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  }
+
+  .tipperary-groundworks-about .btn--white {
+    background: var(--pd-white);
+    color: var(--pd-accent);
+    border: 2px solid var(--pd-white);
+  }
+
+  .tipperary-groundworks-about .btn--outline-white {
+    background: transparent;
+    color: var(--pd-white);
+    border: 2px solid var(--pd-white);
+  }
+
+  .tipperary-groundworks-about .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (min-width: 768px) {
+    .tipperary-groundworks-about .guarantees-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tipperary-groundworks-about .testimonials-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tipperary-groundworks-about .about-cta__inner {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .tipperary-groundworks-about .about-cta__text {
+      flex: 1;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .tipperary-groundworks-about .about-story__inner {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    .tipperary-groundworks-about .guarantees-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tipperary-groundworks-about .btn {
+      transition: none;
+    }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://tipperarygroundworks.ie/about/#webpage",
+      "url": "https://tipperarygroundworks.ie/about/",
+      "name": "About Tipperary Groundworks | Our Story",
+      "description": "Learn about Tipperary Groundworks — your trusted local team for driveways, patios & groundworks across County Tipperary.",
+      "inLanguage": "en-IE"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://tipperarygroundworks.ie/#business",
+      "name": "Tipperary Groundworks",
+      "description": "Tipperary's Trusted Groundworks Team — driveways, patios, groundworks and pipe laying across County Tipperary.",
+      "url": "https://tipperarygroundworks.ie",
+      "telephone": "+353873566934",
+      "email": "tipperarygroundworks@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tipperary",
+        "addressRegion": "County Tipperary",
+        "addressCountry": "IE"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Tipperary Town" },
+        { "@type": "City", "name": "Clonmel" },
+        { "@type": "City", "name": "Nenagh" },
+        { "@type": "City", "name": "Thurles" },
+        { "@type": "City", "name": "Carrick-on-Suir" },
+        { "@type": "City", "name": "Cahir" },
+        { "@type": "City", "name": "Roscrea" },
+        { "@type": "City", "name": "Templemore" },
+        { "@type": "City", "name": "Cashel" },
+        { "@type": "City", "name": "Newport" }
+      ],
+      "knowsAbout": ["Driveways", "Patios", "Groundworks", "Pipe Laying"]
+    }
+  ]
+}
+</script>
+
+<div class="tipperary-groundworks-about">
+
+  <!-- HERO -->
+  <section class="about-hero" aria-labelledby="about-h1">
+    <img
+      src="/assets/images/general-ground.jpeg"
+      alt="Tipperary Groundworks team on site in County Tipperary"
+      class="about-hero__img"
+      width="1400"
+      height="700"
+      fetchpriority="high"
+    />
+    <div class="about-hero__content">
+      <span class="about-hero__eyebrow">About Us</span>
+      <h1 id="about-h1">Why Tipperary Trusts<br>Tipperary Groundworks</h1>
+      <p class="about-hero__sub">Local lads. Solid work. No messing. We've built our reputation one driveway, one patio, one groundworks project at a time — all across County Tipperary.</p>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="about-story" aria-labelledby="story-heading">
+    <div class="about-story__inner">
+      <div class="about-story__img-wrap">
+        <img
+          src="/assets/images/porc4.jpg"
+          alt="Tipperary Groundworks team completing a driveway project"
+          class="about-story__img"
+          width="600"
+          height="480"
+          loading="lazy"
+        />
+        <!-- VERIFY: confirm a suitable team/project photo is available at this path -->
+      </div>
+      <div class="about-story__copy">
+        <span class="eyebrow">Our Story</span>
+        <h2 id="story-heading">Built on the Ground,<br>Not on Promises</h2>
+        <p>Tipperary Groundworks was founded with one goal: deliver the kind of work you'd be proud to show your neighbours. Kevin and the team bring years of experience to every project — driveways, patios, groundworks, pipe laying — you name it, we've done it across Tipperary.</p>
+        <p>We're a local crew. We know these roads, these townlands, these families. That means we show up on time, keep you in the loop throughout, and leave your property spotless when the job's done.</p>
+        <p>No subcontractors. No shortcuts. The same crew you meet on day one sees the project through to the end.</p>
+        <!-- VERIFY: confirm founding story details and that Kevin is the lead contact/owner -->
+      </div>
+    </div>
+  </section>
+
+  <!-- GUARANTEES -->
+  <section class="about-guarantees" aria-labelledby="guarantees-heading">
+    <div class="about-guarantees__inner">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2 id="guarantees-heading">What You Get<br>Every Single Time</h2>
+      <div class="guarantees-grid">
+        <div class="guarantee-card">
+          <span class="guarantee-card__icon" aria-hidden="true">🏆</span>
+          <h3>Years of Experience</h3>
+          <p>A seasoned team with years of experience across driveways, patios, and groundworks in Tipperary.</p>
+          <!-- VERIFY: add specific number of years when confirmed -->
+        </div>
+        <div class="guarantee-card">
+          <span class="guarantee-card__icon" aria-hidden="true">📸</span>
+          <h3>Photo Updates Throughout</h3>
+          <p>We keep you informed at every stage — clear communication and photos from start to finish, even if you're off-site.</p>
+        </div>
+        <div class="guarantee-card">
+          <span class="guarantee-card__icon" aria-hidden="true">✅</span>
+          <h3>Fully Insured</h3>
+          <p>We're fully insured for all works carried out. Your property is protected from day one.</p>
+          <!-- VERIFY: confirm public liability insurance coverage details -->
+        </div>
+        <div class="guarantee-card">
+          <span class="guarantee-card__icon" aria-hidden="true">💬</span>
+          <h3>Fast Free Quotes</h3>
+          <p>No waiting weeks for a price. We respond quickly, assess your project, and get you a clear written quote — fast.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="about-testimonials" aria-labelledby="testimonials-heading">
+    <div class="about-testimonials__inner">
+      <span class="eyebrow">Real Reviews</span>
+      <h2 id="testimonials-heading">Don't Take Our Word For It</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"Kevin and the team were brilliant to deal with, very professional job with updates throughout. We are delighted with the new outdoor space!"</blockquote>
+          <p class="testimonial-card__author">— Kimberly, Tipp</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"Dealing remotely with Kevin and his company were so professional, clear communication with lots of photos of the work at all stages was fantastic. I highly recommend this company."</blockquote>
+          <p class="testimonial-card__author">— Gary, Tipp</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS WE COVER -->
+  <section class="about-areas" aria-labelledby="areas-heading">
+    <div class="about-areas__inner">
+      <span class="eyebrow">Service Area</span>
+      <h2 id="areas-heading">We Cover All of County Tipperary</h2>
+      <p class="about-areas__intro">Based in Tipperary Town, we travel right across the county. Whether you're in Clonmel, Nenagh, Thurles or anywhere in between — we'll come to you. No call-out charges for assessments within our core service area.</p>
+      <div class="areas-chips" role="list" aria-label="Towns we serve in County Tipperary">
+        <span class="area-chip" role="listitem">Tipperary Town</span>
+        <span class="area-chip" role="listitem">Clonmel</span>
+        <span class="area-chip" role="listitem">Nenagh</span>
+        <span class="area-chip" role="listitem">Thurles</span>
+        <span class="area-chip" role="listitem">Carrick-on-Suir</span>
+        <span class="area-chip" role="listitem">Cahir</span>
+        <span class="area-chip" role="listitem">Roscrea</span>
+        <span class="area-chip" role="listitem">Templemore</span>
+        <span class="area-chip" role="listitem">Cashel</span>
+        <span class="area-chip" role="listitem">Newport</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="about-cta" aria-labelledby="cta-heading">
+    <div class="about-cta__inner">
+      <div class="about-cta__text">
+        <h2 id="cta-heading">Ready to Get Started?</h2>
+        <p>Fast free quotes. No pressure. Just straight-talking advice from a team that knows the job inside out. Get in touch today.</p>
+      </div>
+      <div class="btn-row">
+        <a href="/contact/" class="btn btn--white">Get a Free Quote</a>
+        <a href="tel:+353873566934" class="btn btn--outline-white">Call Us Now</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+{% endblock %}

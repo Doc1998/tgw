@@ -1,0 +1,450 @@
+<style>
+  :root {
+    --pd-primary: #292524;
+    --pd-accent: #B45309;
+    --pd-light: #F5F0E8;
+    --pd-white: #ffffff;
+    --pd-font-display: 'Barlow Condensed', sans-serif;
+    --pd-font-body: 'Barlow', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .pd-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: var(--pd-font-body);
+    /* Safety net: if any child ever forces extra width again, clip it here
+       instead of letting it push the whole page into horizontal scroll. */
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  /* ── Top Bar ── */
+  .pd-topbar {
+    background: var(--pd-primary);
+    border-bottom: 2px solid var(--pd-accent);
+    padding: 0 1.25rem;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .pd-topbar__tagline {
+    font-family: var(--pd-font-display);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--pd-light);
+    white-space: nowrap;
+  }
+
+  .pd-topbar__right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0;
+  }
+
+  .pd-topbar__phone {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--pd-font-display);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--pd-light);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s;
+  }
+
+  .pd-topbar__phone:hover { color: var(--pd-accent); }
+  .pd-topbar__phone svg { flex-shrink: 0; }
+
+  .pd-topbar__socials {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .pd-topbar__socials a {
+    display: flex;
+    align-items: center;
+    color: var(--pd-light);
+    opacity: 0.75;
+    transition: opacity 0.2s, color 0.2s;
+  }
+
+  .pd-topbar__socials a:hover {
+    opacity: 1;
+    color: var(--pd-accent);
+  }
+
+  /* ── Main Bar ── */
+  .pd-mainbar {
+    background: var(--pd-white);
+    border-bottom: 3px solid var(--pd-primary);
+    padding: 0 1.25rem;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  /* Logo — allowed to shrink/wrap so it can never force the header wider
+     than the viewport. This was the cause of the horizontal-scroll bug:
+     flex-shrink:0 locked it at its full un-wrapped width. */
+  .pd-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  .pd-logo img {
+    height: 100px;
+    width: auto;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .pd-logo__text {
+    font-family: var(--pd-font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--pd-primary);
+    line-height: 1.1;
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+
+  .pd-logo__text span {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--pd-accent);
+    white-space: normal;
+  }
+
+  /* Nav */
+  .pd-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    list-style: none;
+  }
+
+  .pd-nav a {
+    font-family: var(--pd-font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--pd-primary);
+    text-decoration: none;
+    padding: 0.4rem 0.65rem;
+    border-radius: 4px;
+    transition: background 0.18s, color 0.18s;
+    white-space: nowrap;
+  }
+
+  .pd-nav a:hover,
+  .pd-nav a[aria-current="page"] {
+    background: var(--pd-primary);
+    color: var(--pd-white);
+  }
+
+  /* CTA Button */
+  .pd-header-cta {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--pd-white);
+    background: var(--pd-accent);
+    border: 2px solid var(--pd-accent);
+    border-radius: 4px;
+    padding: 0.5rem 1.2rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    flex-shrink: 0;
+  }
+
+  .pd-header-cta:hover {
+    background: var(--pd-primary);
+    border-color: var(--pd-primary);
+    color: var(--pd-white);
+  }
+
+  /* Hamburger */
+  .pd-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: 2px solid var(--pd-primary);
+    border-radius: 4px;
+    padding: 0.4rem 0.5rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .pd-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--pd-primary);
+    border-radius: 2px;
+    transition: transform 0.25s, opacity 0.25s;
+  }
+
+  .pd-hamburger[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .pd-hamburger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+  .pd-hamburger[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Mobile Nav Drawer */
+  .pd-mobile-nav {
+    display: none;
+    background: var(--pd-primary);
+    padding: 1rem 1.25rem 1.25rem;
+    border-top: 2px solid var(--pd-accent);
+  }
+
+  .pd-mobile-nav.is-open { display: block; }
+
+  .pd-mobile-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .pd-mobile-nav ul a {
+    display: block;
+    font-family: var(--pd-font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--pd-light);
+    text-decoration: none;
+    padding: 0.65rem 0.75rem;
+    border-radius: 4px;
+    transition: background 0.18s, color 0.18s;
+  }
+
+  .pd-mobile-nav ul a:hover {
+    background: var(--pd-accent);
+    color: var(--pd-white);
+  }
+
+  .pd-mobile-nav__cta {
+    display: block;
+    font-family: var(--pd-font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--pd-white);
+    background: var(--pd-accent);
+    border: 2px solid var(--pd-accent);
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .pd-mobile-nav__cta:hover {
+    background: transparent;
+    color: var(--pd-accent);
+  }
+
+  /* Focus visibility */
+  .pd-header a:focus-visible,
+  .pd-header button:focus-visible {
+    outline: 2px solid var(--pd-accent);
+    outline-offset: 2px;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 767px) {
+    .pd-topbar__tagline { display: none; }
+    .pd-nav, .pd-header-cta { display: none; }
+    .pd-hamburger { display: flex; }
+    .pd-mainbar { min-height: 56px; padding: 0.5rem 1rem; }
+
+    /* Shorten the logo lockup so it never has to fight the hamburger
+       for space: smaller title, subtitle hidden entirely. */
+    .pd-logo img { height: 100px; }
+    .pd-logo__text { font-size: 1.05rem; }
+    .pd-logo__text span { display: none; }
+  }
+
+  @media (max-width: 359px) {
+    .pd-topbar { padding: 0 0.85rem; }
+    .pd-mainbar { padding: 0.5rem 0.85rem; gap: 0.5rem; }
+    .pd-logo { gap: 0.4rem; }
+    .pd-logo img { height: 32px; }
+    .pd-logo__text { font-size: 0.92rem; }
+    .pd-topbar__phone span,
+    .pd-topbar__phone { font-size: 0.8rem; }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .pd-nav a { font-size: 0.88rem; padding: 0.4rem 0.45rem; }
+    .pd-logo__text { font-size: 1.1rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pd-hamburger span,
+    .pd-nav a,
+    .pd-topbar__phone,
+    .pd-topbar__socials a,
+    .pd-header-cta,
+    .pd-mobile-nav ul a,
+    .pd-mobile-nav__cta {
+      transition: none;
+    }
+  }
+</style>
+
+<header class="pd-header" role="banner">
+
+  <!-- Top Bar -->
+  <div class="pd-topbar">
+    <span class="pd-topbar__tagline">Tipperary's Trusted Groundworks Team</span>
+    <div class="pd-topbar__right">
+      <a href="tel:+353873566934" class="pd-topbar__phone" aria-label="Call us">
+        <!-- Phone icon -->
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.18 21 3 13.82 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z" fill="currentColor"/>
+        </svg>
+        +353 87 356 6934
+      </a>
+      <div class="pd-topbar__socials" aria-label="Social media links">
+        <!-- Facebook -->
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M22 12a10 10 0 10-11.563 9.878v-6.988h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988A10.002 10.002 0 0022 12z"/>
+          </svg>
+        </a>
+        <!-- Instagram -->
+        <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.337 3.608 1.312.975.975 1.25 2.242 1.312 3.608.058 1.266.07 1.646.07 4.847s-.012 3.581-.07 4.847c-.062 1.366-.337 2.633-1.312 3.608-.975.975-2.242 1.25-3.608 1.312-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.337-3.608-1.312C2.567 19.483 2.292 18.216 2.23 16.85 2.172 15.584 2.16 15.204 2.16 12s.012-3.584.07-4.85c.062-1.366.337-2.633 1.312-3.608C4.517 2.567 5.784 2.292 7.15 2.23 8.416 2.172 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.333.014 7.053.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.053.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.856.601 3.698 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.856-.085 3.698-.601 5.038-1.942 1.341-1.34 1.857-3.182 1.942-5.038C23.986 15.668 24 15.259 24 12s-.014-3.667-.072-4.947c-.085-1.856-.601-3.698-1.942-5.039C20.646.673 18.804.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Bar -->
+  <div class="pd-mainbar">
+    <a href="/" class="pd-logo" aria-label="Tipperary Groundworks – Home">
+      <img src="/assets/images/logo.png" alt="Tipperary Groundworks logo" width="46" height="46" onerror="this.style.display='none'">
+      </span>
+    </a>
+<!--
+        <nav aria-label="Main navigation">
+      <ul class="pd-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/driveways-tipperary/">Driveways</a></li>
+        <li><a href="/patios-tipperary/">Patios</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+-->
+    <nav aria-label="Main navigation">
+      <ul class="pd-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Services</a></li>
+        <li><a href="/">About</a></li>
+        <li><a href="/">Driveways</a></li>
+        <li><a href="/">Patios</a></li>
+        <li><a href="/">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a href="/contact/" class="pd-header-cta" aria-label="Get a free quote">Free Quote</a>
+
+    <button class="pd-hamburger" aria-controls="pd-mobile-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Nav -->
+  <nav id="pd-mobile-nav" class="pd-mobile-nav" aria-label="Mobile navigation" hidden>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Services</a></li>
+      <li><a href="/">About</a></li>
+      <li><a href="/">Driveways</a></li>
+      <li><a href="/">Patios</a></li>
+      <li><a href="/">Contact</a></li>
+    </ul>
+    <a href="/" class="pd-mobile-nav__cta">Get a Free Quote</a>
+  </nav>
+
+  <!--
+  <nav id="pd-mobile-nav" class="pd-mobile-nav" aria-label="Mobile navigation" hidden>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/driveways-tipperary/">Driveways</a></li>
+      <li><a href="/patios-tipperary/">Patios</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+    <a href="/contact/" class="pd-mobile-nav__cta">Get a Free Quote</a>
+  </nav>-->
+
+</header>
+
+<script>
+  (function () {
+    var btn = document.querySelector('.pd-hamburger');
+    var nav = document.getElementById('pd-mobile-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function () {
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      nav.classList.toggle('is-open', !isOpen);
+      if (isOpen) {
+        nav.setAttribute('hidden', '');
+      } else {
+        nav.removeAttribute('hidden');
+      }
+    });
+  })();
+</script>

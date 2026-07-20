@@ -1,0 +1,1685 @@
+---
+title: 'Groundworks Tipperary | Driveways, Patios & Pipe Laying'
+description: 'Expert Groundworks Tipperary — driveways, patios, pipe laying & more. Serving Clonmel, Nenagh, Thurles & all of Tipperary. Fast free quotes. Call today.'
+preloadImg: '/assets/images/porc4.jpg'
+permalink: '/'
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+
+{% extends "layouts/home-base.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<style>
+  :root {
+    --pd-primary: #292524;
+    --pd-accent: #B45309;
+    --pd-light: #F5F0E8;
+    --pd-white: #ffffff;
+    --pd-font-display: 'Barlow Condensed', sans-serif;
+    --pd-font-body: 'Barlow', sans-serif;
+    --pd-section-pad: clamp(2.75rem, 7vw, 5rem);
+  }
+
+  .tipperary-groundworks-home *,
+  .tipperary-groundworks-home *::before,
+  .tipperary-groundworks-home *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .tipperary-groundworks-home {
+    font-family: var(--pd-font-body);
+    color: var(--pd-primary);
+    background: var(--pd-white);
+    overflow-x: hidden;
+  }
+
+  .tipperary-groundworks-home img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ─── ACCESSIBILITY: FOCUS STATES ─────────────────────────────── */
+  .tipperary-groundworks-home a:focus-visible,
+  .tipperary-groundworks-home button:focus-visible,
+  .tipperary-groundworks-home summary:focus-visible,
+  .tipperary-groundworks-home input:focus-visible,
+  .tipperary-groundworks-home textarea:focus-visible {
+    outline: 2px solid var(--pd-accent);
+    outline-offset: 3px;
+  }
+
+  /* ─── HERO ─────────────────────────────────────────────────── */
+  .tipperary-groundworks-home .home-hero {
+    position: relative;
+    min-height: 92vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    background: url('/assets/images/porc3.jpeg') center center / cover no-repeat;
+  }
+
+  .tipperary-groundworks-home .home-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(41,37,36,0.88) 0%, rgba(41,37,36,0.65) 100%);
+  }
+
+  .tipperary-groundworks-home .home-hero__inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4.5rem 1.25rem 3rem;
+  }
+
+  .tipperary-groundworks-home .home-hero__eyebrow {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    border-left: 3px solid var(--pd-accent);
+    padding-left: 0.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .tipperary-groundworks-home .home-hero__h1 {
+    font-family: var(--pd-font-display);
+    font-size: clamp(2.1rem, 9vw, 5rem);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--pd-white);
+    margin-bottom: 1.25rem;
+    overflow-wrap: break-word;
+  }
+
+  .tipperary-groundworks-home .home-hero__h1 span {
+    color: var(--pd-accent);
+  }
+
+  .tipperary-groundworks-home .home-hero__sub {
+    font-size: clamp(0.98rem, 2.5vw, 1.1rem);
+    line-height: 1.6;
+    color: rgba(255,255,255,0.88);
+    max-width: 600px;
+    margin-bottom: 1.75rem;
+  }
+
+  .tipperary-groundworks-home .home-hero__trust {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .tipperary-groundworks-home .home-hero__trust li {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-family: var(--pd-font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--pd-white);
+  }
+
+  .tipperary-groundworks-home .home-hero__trust li svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: var(--pd-accent);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .tipperary-groundworks-home .home-hero__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .tipperary-groundworks-home .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-height: 44px;
+    font-family: var(--pd-font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.85rem 1.75rem;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
+  }
+
+  .tipperary-groundworks-home .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+  }
+
+  .tipperary-groundworks-home .btn--accent {
+    background: var(--pd-accent);
+    color: var(--pd-white);
+    border-color: var(--pd-accent);
+  }
+
+  .tipperary-groundworks-home .btn--accent:hover {
+    background: #92400E;
+    border-color: #92400E;
+  }
+
+  .tipperary-groundworks-home .btn--outline-white {
+    background: transparent;
+    color: var(--pd-white);
+    border-color: var(--pd-white);
+  }
+
+  .tipperary-groundworks-home .btn--outline-white:hover {
+    background: var(--pd-white);
+    color: var(--pd-primary);
+  }
+
+  .tipperary-groundworks-home .btn--outline-accent {
+    background: transparent;
+    color: var(--pd-accent);
+    border-color: var(--pd-accent);
+  }
+
+  .tipperary-groundworks-home .btn--outline-accent:hover {
+    background: var(--pd-accent);
+    color: var(--pd-white);
+  }
+
+  .tipperary-groundworks-home .btn--dark {
+    background: var(--pd-primary);
+    color: var(--pd-white);
+    border-color: var(--pd-primary);
+  }
+
+  .tipperary-groundworks-home .btn--dark:hover {
+    background: #1a1716;
+    border-color: #1a1716;
+  }
+
+  /* ─── SHARED LAYOUT ─────────────────────────────────────────── */
+  .tipperary-groundworks-home .container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  .tipperary-groundworks-home .eyebrow {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    border-left: 3px solid var(--pd-accent);
+    padding-left: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tipperary-groundworks-home .section-title {
+    font-family: var(--pd-font-display);
+    font-size: clamp(1.65rem, 5.5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.08;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    overflow-wrap: break-word;
+  }
+
+  .tipperary-groundworks-home .section-body {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4B4542;
+  }
+
+  .tipperary-groundworks-home .divider-rule {
+    width: 48px;
+    height: 3px;
+    background: var(--pd-accent);
+    margin: 0.9rem 0 1.4rem;
+    border: none;
+  }
+
+  /* ─── DIAGONAL CLIP ─────────────────────────────────────────── */
+  /* Extra bottom/top padding is set on the individual sections below
+     (not here) so the section-specific padding rule doesn't clobber it. */
+  .tipperary-groundworks-home .clip-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  }
+
+  .tipperary-groundworks-home .clip-top {
+    clip-path: polygon(0 2.5%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  /* ─── INTRO ─────────────────────────────────────────────────── */
+  .tipperary-groundworks-home .home-intro {
+    background: var(--pd-white);
+    padding: var(--pd-section-pad) 0;
+  }
+
+  .tipperary-groundworks-home .home-intro__grid {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .tipperary-groundworks-home .home-intro__text .section-body + .section-body {
+    margin-top: 1rem;
+  }
+
+  .tipperary-groundworks-home .trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .tipperary-groundworks-home .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--pd-light);
+    border-left: 3px solid var(--pd-accent);
+    padding: 0.6rem 1rem;
+    font-family: var(--pd-font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--pd-primary);
+  }
+
+  .tipperary-groundworks-home .trust-badge svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    stroke: var(--pd-accent);
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .tipperary-groundworks-home .home-intro__image-wrap {
+    position: relative;
+  }
+
+  .tipperary-groundworks-home .home-intro__image-wrap img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tipperary-groundworks-home .home-intro__image-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -8px 8px 8px -8px;
+    border: 2px solid var(--pd-accent);
+    z-index: 0;
+  }
+
+  /* ─── SERVICES ──────────────────────────────────────────────── */
+  .tipperary-groundworks-home .home-services {
+    background: var(--pd-light);
+    padding: var(--pd-section-pad) 0;
+  }
+
+  .tipperary-groundworks-home .home-services__header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto clamp(2.25rem, 6vw, 3.5rem);
+  }
+
+  .tipperary-groundworks-home .home-services__header .eyebrow {
+    border-left: none;
+    padding-left: 0;
+    display: block;
+  }
+
+  .tipperary-groundworks-home .service-block {
+    display: grid;
+    gap: 0;
+    background: var(--pd-white);
+    margin-bottom: 2.5rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+
+  .tipperary-groundworks-home .service-block:last-child {
+    margin-bottom: 0;
+  }
+
+  .tipperary-groundworks-home .service-block__img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+
+  .tipperary-groundworks-home .service-block__content {
+    padding: 1.75rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tipperary-groundworks-home .service-block__content h3 {
+    font-family: var(--pd-font-display);
+    font-size: clamp(1.35rem, 4vw, 1.9rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--pd-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .tipperary-groundworks-home .service-block__content .divider-rule {
+    margin-bottom: 1rem;
+  }
+
+  .tipperary-groundworks-home .service-block__content p {
+    font-size: 0.975rem;
+    line-height: 1.7;
+    color: #4B4542;
+    margin-bottom: 1rem;
+  }
+
+  .tipperary-groundworks-home .service-block__content p + p {
+    margin-top: 0.5rem;
+  }
+
+  /* ─── WHY CHOOSE US ─────────────────────────────────────────── */
+  .tipperary-groundworks-home .home-why {
+    background: var(--pd-primary);
+    padding-top: var(--pd-section-pad);
+    padding-bottom: clamp(4rem, 11vw, 7rem);
+    position: relative;
+  }
+
+  .tipperary-groundworks-home .home-why__header {
+    text-align: center;
+    margin-bottom: clamp(2rem, 6vw, 3rem);
+  }
+
+  .tipperary-groundworks-home .home-why__header .section-title {
+    color: var(--pd-white);
+  }
+
+  .tipperary-groundworks-home .home-why__header .eyebrow {
+    border-left: none;
+    padding-left: 0;
+    display: block;
+  }
+
+  .tipperary-groundworks-home .why-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .tipperary-groundworks-home .why-card {
+    background: rgba(255,255,255,0.05);
+    border-top: 3px solid var(--pd-accent);
+    padding: 1.75rem 1.5rem;
+  }
+
+  .tipperary-groundworks-home .why-card__icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+    stroke: var(--pd-accent);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .tipperary-groundworks-home .why-card h3 {
+    font-family: var(--pd-font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--pd-white);
+    margin-bottom: 0.6rem;
+  }
+
+  .tipperary-groundworks-home .why-card p {
+    font-size: 0.93rem;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.75);
+  }
+
+  /* ─── PROCESS ───────────────────────────────────────────────── */
+  .tipperary-groundworks-home .home-process {
+    background: var(--pd-white);
+    padding-top: clamp(4rem, 11vw, 7rem);
+    padding-bottom: var(--pd-section-pad);
+  }
+
+  .tipperary-groundworks-home .home-process__header {
+    max-width: 680px;
+    margin: 0 auto clamp(2rem, 6vw, 3rem);
+    text-align: center;
+  }
+
+  .tipperary-groundworks-home .process-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    counter-reset: step-counter;
+  }
+
+  .tipperary-groundworks-home .process-step {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    border-left: 3px solid var(--pd-accent);
+    padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+    background: var(--pd-light);
+  }
+
+  .tipperary-groundworks-home .process-step__num {
+    font-family: var(--pd-font-display);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--pd-accent);
+    line-height: 1;
+    min-width: 52px;
+  }
+
+  .tipperary-groundworks-home .process-step__body h3 {
+    font-family: var(--pd-font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--pd-primary);
+    margin-bottom: 0.35rem;
+  }
+
+  .tipperary-groundworks-home .process-step__body p {
+    font-size: 0.93rem;
+    line-height: 1.65;
+    color: #4B4542;
+  }
+
+  /* ─── PRICING ───────────────────────────────────────────────── */
+  .tipperary-groundworks-home .home-pricing {
+    background: var(--pd-light);
+    padding: var(--pd-section-pad) 0;
+  }
+
+  .tipperary-groundworks-home .home-pricing__header {
+    max-width: 700px;
+    margin: 0 auto clamp(1.75rem, 5vw, 2.5rem);
+    text-align: center;
+  }
+
+  .tipperary-groundworks-home .pricing-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .tipperary-groundworks-home .pricing-card {
+    background: var(--pd-white);
+    border-top: 4px solid var(--pd-accent);
+    padding: 1.75rem 1.5rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+  }
+
+  .tipperary-groundworks-home .pricing-card h3 {
+    font-family: var(--pd-font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--pd-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .tipperary-groundworks-home .pricing-card p {
+    font-size: 0.93rem;
+    line-height: 1.65;
+    color: #4B4542;
+  }
+
+  .tipperary-groundworks-home .pricing-note {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6B6460;
+  }
+
+  /* ─── LOCAL AREA ─────────────────────────────────────────────── */
+  .tipperary-groundworks-home .home-area {
+    background: var(--pd-white);
+    padding: var(--pd-section-pad) 0;
+  }
+
+  .tipperary-groundworks-home .home-area__grid {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .tipperary-groundworks-home .area-towns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.25rem;
+  }
+
+  .tipperary-groundworks-home .area-town {
+    font-family: var(--pd-font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--pd-primary);
+    background: var(--pd-light);
+    border: 1px solid #D6CEBF;
+    padding: 0.4rem 0.85rem;
+  }
+
+  /* ─── TESTIMONIALS ──────────────────────────────────────────── */
+  .tipperary-groundworks-home .home-testimonials {
+    background: var(--pd-light);
+    padding: var(--pd-section-pad) 0;
+  }
+
+  .tipperary-groundworks-home .home-testimonials__header {
+    text-align: center;
+    margin-bottom: clamp(2rem, 6vw, 3rem);
+  }
+
+  .tipperary-groundworks-home .testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .tipperary-groundworks-home .testimonial-card {
+    background: var(--pd-white);
+    border-top: 4px solid var(--pd-accent);
+    padding: 1.75rem 1.5rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+  }
+
+  .tipperary-groundworks-home .testimonial-card__stars {
+    font-size: 1.1rem;
+    color: #FBBF24;
+    margin-bottom: 0.75rem;
+  }
+
+  .tipperary-groundworks-home .testimonial-card blockquote {
+    font-size: 0.975rem;
+    line-height: 1.7;
+    color: #4B4542;
+    font-style: italic;
+    margin-bottom: 1rem;
+    border: none;
+    padding: 0;
+  }
+
+  .tipperary-groundworks-home .testimonial-card__author {
+    font-family: var(--pd-font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--pd-primary);
+  }
+
+  /* ─── FAQ ───────────────────────────────────────────────────── */
+  .tipperary-groundworks-home .home-faq {
+    background: var(--pd-white);
+    padding: var(--pd-section-pad) 0;
+  }
+
+  .tipperary-groundworks-home .home-faq__header {
+    max-width: 700px;
+    margin: 0 auto clamp(2rem, 6vw, 3rem);
+    text-align: center;
+  }
+
+  .tipperary-groundworks-home .faq-list {
+    max-width: 820px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .tipperary-groundworks-home .faq-item {
+    border-bottom: 1px solid #DDD8D0;
+  }
+
+  .tipperary-groundworks-home .faq-item:first-child {
+    border-top: 1px solid #DDD8D0;
+  }
+
+  .tipperary-groundworks-home .faq-item summary {
+    list-style: none;
+    padding: 1.2rem 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--pd-font-display);
+    font-size: clamp(0.95rem, 3vw, 1.05rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--pd-primary);
+    user-select: none;
+  }
+
+  .tipperary-groundworks-home .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .tipperary-groundworks-home .faq-item summary::after {
+    content: '+';
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--pd-accent);
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .tipperary-groundworks-home .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  .tipperary-groundworks-home .faq-item__body {
+    padding: 0 0 1.25rem;
+    font-size: 0.97rem;
+    line-height: 1.75;
+    color: #4B4542;
+  }
+
+  /* ─── CTA / FORM ─────────────────────────────────────────────── */
+  .tipperary-groundworks-home .home-cta {
+    background: var(--pd-primary);
+    padding: var(--pd-section-pad) 0;
+  }
+
+  .tipperary-groundworks-home .home-cta__grid {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .tipperary-groundworks-home .home-cta__copy .section-title {
+    color: var(--pd-white);
+    margin-bottom: 1rem;
+  }
+
+  .tipperary-groundworks-home .home-cta__copy p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 1.5rem;
+  }
+
+  .tipperary-groundworks-home .home-cta__tel {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--pd-font-display);
+    font-size: clamp(1.25rem, 5vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--pd-accent);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .tipperary-groundworks-home .home-cta__tel:hover {
+    color: #F59E0B;
+  }
+
+  .tipperary-groundworks-home .quote-form {
+    background: rgba(255,255,255,0.06);
+    border-top: 3px solid var(--pd-accent);
+    padding: 1.75rem 1.25rem;
+  }
+
+  .tipperary-groundworks-home .quote-form h2 {
+    font-family: var(--pd-font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--pd-white);
+    margin-bottom: 1.5rem;
+  }
+
+  .tipperary-groundworks-home .form-group {
+    margin-bottom: 1.1rem;
+  }
+
+  .tipperary-groundworks-home .form-group label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.35rem;
+  }
+
+  .tipperary-groundworks-home .form-group input,
+  .tipperary-groundworks-home .form-group textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 2px;
+    padding: 0.75rem 0.9rem;
+    font-family: var(--pd-font-body);
+    font-size: 1rem;
+    color: var(--pd-white);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+
+  .tipperary-groundworks-home .form-group input::placeholder,
+  .tipperary-groundworks-home .form-group textarea::placeholder {
+    color: rgba(255,255,255,0.35);
+  }
+
+  .tipperary-groundworks-home .form-group input:focus,
+  .tipperary-groundworks-home .form-group textarea:focus {
+    border-color: var(--pd-accent);
+  }
+
+  .tipperary-groundworks-home .form-group textarea {
+    resize: vertical;
+    min-height: 110px;
+  }
+
+  .tipperary-groundworks-home .form-submit {
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  /* ─── RESPONSIVE: SMALL PHONES (<480px) ────────────────────────── */
+  @media (max-width: 479px) {
+    .tipperary-groundworks-home .home-hero__inner {
+      padding: 3.5rem 1.1rem 2.5rem;
+    }
+
+    .tipperary-groundworks-home .home-hero__ctas .btn {
+      width: 100%;
+    }
+
+    .tipperary-groundworks-home .container {
+      padding: 0 1.1rem;
+    }
+
+    .tipperary-groundworks-home .service-block__content,
+    .tipperary-groundworks-home .quote-form {
+      padding: 1.5rem 1.1rem;
+    }
+  }
+
+  /* ─── RESPONSIVE 768px ───────────────────────────────────────── */
+  @media (min-width: 768px) {
+    .tipperary-groundworks-home .home-hero__trust {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.75rem 2rem;
+    }
+
+    .tipperary-groundworks-home .home-intro__grid {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    .tipperary-groundworks-home .service-block {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .tipperary-groundworks-home .service-block.reverse .service-block__img {
+      order: 2;
+    }
+
+    .tipperary-groundworks-home .service-block.reverse .service-block__content {
+      order: 1;
+    }
+
+    .tipperary-groundworks-home .service-block__img {
+      height: 100%;
+      aspect-ratio: auto;
+      min-height: 320px;
+    }
+
+    .tipperary-groundworks-home .why-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tipperary-groundworks-home .process-steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tipperary-groundworks-home .pricing-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tipperary-groundworks-home .testimonial-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tipperary-groundworks-home .home-cta__grid {
+      grid-template-columns: 1fr 1.1fr;
+      align-items: start;
+    }
+
+    .tipperary-groundworks-home .home-area__grid {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+  }
+
+  /* ─── RESPONSIVE 1024px ─────────────────────────────────────── */
+  @media (min-width: 1024px) {
+    .tipperary-groundworks-home .home-hero__inner {
+      padding-top: 7rem;
+      padding-bottom: 5rem;
+    }
+
+    .tipperary-groundworks-home .why-cards {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .tipperary-groundworks-home .process-steps {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .tipperary-groundworks-home .pricing-cards {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .tipperary-groundworks-home .service-block__img {
+      min-height: 380px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tipperary-groundworks-home .btn,
+    .tipperary-groundworks-home .faq-item summary::after,
+    .tipperary-groundworks-home .form-group input,
+    .tipperary-groundworks-home .form-group textarea,
+    .tipperary-groundworks-home .home-cta__tel {
+      transition: none;
+    }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Tipperary Groundworks",
+  "description": "Expert groundworks, driveways, patios and pipe laying services across County Tipperary. Trusted, fully insured and delivering quality workmanship throughout Tipperary and surrounding areas.",
+  "url": "https://tipperarygroundworks.ie/",
+  "telephone": "+353873566934",
+  "email": "tipperarygroundworks@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tipperary",
+    "addressRegion": "County Tipperary",
+    "addressCountry": "IE"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Tipperary Town" },
+    { "@type": "City", "name": "Clonmel" },
+    { "@type": "City", "name": "Nenagh" },
+    { "@type": "City", "name": "Thurles" },
+    { "@type": "City", "name": "Carrick-on-Suir" },
+    { "@type": "City", "name": "Cahir" },
+    { "@type": "City", "name": "Roscrea" },
+    { "@type": "City", "name": "Templemore" },
+    { "@type": "City", "name": "Cashel" },
+    { "@type": "City", "name": "Newport" },
+    { "@type": "AdministrativeArea", "name": "County Tipperary" }
+  ],
+  "priceRange": "€€",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "07:30",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "14:00"
+    }
+  ],
+  "sameAs": []
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Groundworks Tipperary",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Tipperary Groundworks",
+    "telephone": "+353873566934"
+  },
+  "serviceType": "Groundworks",
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "County Tipperary"
+  },
+  "description": "Professional groundworks services in Tipperary including driveways, patios, pipe laying and general groundworks for residential and commercial clients.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Groundworks Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Driveway Installation Tipperary" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Patio Installation Tipperary" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pipe Laying Tipperary" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "General Groundworks Tipperary" } }
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What groundworks services do you offer in Tipperary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer a full range of groundworks services across County Tipperary including driveway installation (tarmac, block paving and resin bound), patio construction, pipe laying, drainage works and general groundworks for residential and commercial clients."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which areas of Tipperary do you cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We cover the full county — Tipperary Town, Clonmel, Nenagh, Thurles, Carrick-on-Suir, Cahir, Roscrea, Templemore, Cashel and Newport, as well as surrounding rural townlands."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a new driveway cost in Tipperary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Driveway costs vary depending on size, access, the surface material chosen and any prep groundworks needed. Resin bound and block paving surfaces typically cost more than tarmac. We provide free, no-obligation quotes tailored to your exact project — contact us to get an accurate figure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a driveway installation take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most standard residential driveways are completed within 1–3 days once the groundwork preparation is done. Larger or more complex projects may take longer. We'll give you a realistic timeline at the quoting stage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you fully insured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Tipperary Groundworks carries full public liability insurance. You can request confirmation of our insurance at any point during the quoting or booking process."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need planning permission for a new driveway or patio in Ireland?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most cases, residential driveway and patio work in Ireland does not require planning permission under exempted development rules — provided the materials are permeable or drainage is properly managed. We can advise you on this during the consultation. Always worth checking with Tipperary County Council for specific circumstances."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best surface for a driveway in Tipperary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your budget, aesthetic preference and usage. Resin bound gravel offers a smart, low-maintenance finish with excellent drainage. Block paving is durable and highly customisable. Tarmac is the most cost-effective option. We'll walk you through the pros and cons of each during your free quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle pipe laying and drainage work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, pipe laying is one of our core services. We install drainage systems, waste management infrastructure, supply pipes and related groundworks for both new builds and renovation projects throughout Tipperary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get a quote?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simply fill in the quote form on this page, call us directly on +353 87 356 6934, or send an email to tipperarygroundworks@gmail.com. We aim to respond to all enquiries promptly and can usually arrange a site visit quickly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work on commercial groundworks projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Alongside residential work, we take on commercial groundworks contracts across Tipperary — including car parks, yard surfacing, drainage for commercial buildings and site preparation for new developments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What preparation is needed before a new patio or driveway is laid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Good preparation is what makes a lasting surface. We excavate to the correct depth, install a well-compacted sub-base, manage any drainage requirements and ensure a stable foundation before any surfacing material is laid. Cutting corners on prep is the number-one cause of early failure — we don't do that."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you help with an outdoor space renovation, not just a driveway?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We work on complete outdoor space transformations — combining driveways, patios, pathways, edging and groundworks elements into a single project. Get in touch and tell us what you have in mind."
+      }
+    }
+  ]
+}
+</script>
+
+<div class="tipperary-groundworks-home">
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HERO -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="home-hero" aria-labelledby="hero-heading">
+    <div class="home-hero__overlay" aria-hidden="true"></div>
+    <div class="home-hero__inner">
+      <p class="home-hero__eyebrow">Tipperary's Trusted Groundworks Team</p>
+      <h1 class="home-hero__h1" id="hero-heading">
+        <span>Groundworks</span><br>Tipperary.<br>Done Right.
+      </h1>
+      <p class="home-hero__sub">Driveways, patios, pipe laying and full groundworks — built to last by people who know Tipperary inside out. No fuss. No corners cut.</p>
+      <ul class="home-hero__trust" aria-label="Trust points">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Fully Insured &amp; Experienced
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Fast Free Quotes — No Obligation
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Covering All of County Tipperary
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Photo Updates Throughout Every Job
+        </li>
+      </ul>
+      <div class="home-hero__ctas">
+        <a href="/contact/" class="btn btn--accent">Get a Fast Free Quote</a>
+        <a href="tel:+353873566934" class="btn btn--outline-white">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.63a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .82h3a2 2 0 012 1.72c.13.96.36 1.9.69 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0122 16.92z"/></svg>
+          087 356 6934
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- INTRO -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="home-intro" aria-labelledby="intro-heading">
+    <div class="container">
+      <div class="home-intro__grid">
+
+        <div class="home-intro__text">
+          <p class="eyebrow">About Tipperary Groundworks</p>
+          <h2 class="section-title" id="intro-heading">Groundworks Tipperary — Proper Job, Every Time</h2>
+          <hr class="divider-rule" aria-hidden="true">
+
+          <p class="section-body">A cracked driveway, a waterlogged garden, a patio that's sinking — these things don't fix themselves and they don't get better with time. That's where we come in. Tipperary Groundworks is a locally based team with years of experience delivering groundworks, driveway installations, patio builds and pipe laying throughout County Tipperary. We're not a call centre or a national franchise — we're your neighbours, and our reputation lives or dies on every job we put our name to.</p>
+
+          <p class="section-body" style="margin-top:1rem;">We work across the whole county, from Clonmel to Nenagh, Thurles to Carrick-on-Suir. Whether you need a full site groundworks package for a new build, a smart new resin driveway, a low-maintenance patio to enjoy your outdoor space, or professional pipe laying for drainage and water management — we've got you covered. Every project gets the same approach: solid preparation, quality materials, honest communication and a finish you'll be proud of for years.</p>
+
+          <p class="section-body" style="margin-top:1rem;">We believe you deserve to know exactly what's happening on your property. That's why we keep you updated with photos throughout the job — no nasty surprises, no guesswork. Just a clean, well-executed result and a team that actually answers the phone.</p>
+
+          <div class="trust-badges" aria-label="Trust indicators">
+            <div class="trust-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Fully Insured
+            </div>
+            <div class="trust-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Years of Experience
+            </div>
+            <div class="trust-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Based in Tipperary
+            </div>
+          </div>
+        </div>
+
+        <div class="home-intro__image-wrap">
+          <img
+            src="/assets/images/tarmac.jpg"
+            alt="Tipperary Groundworks team working on a driveway in County Tipperary"
+            width="560"
+            height="380"
+            loading="lazy"
+          >
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SERVICES -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="home-services" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="home-services__header">
+        <p class="eyebrow">What We Do</p>
+        <h2 class="section-title" id="services-heading">Our Groundworks Services in Tipperary</h2>
+        <hr class="divider-rule" style="margin: 0.9rem auto 0;" aria-hidden="true">
+      </div>
+
+      <!-- Driveways -->
+      <article class="service-block" aria-labelledby="service-driveways">
+        <img
+          class="service-block__img"
+          src="/assets/images/tarmac-driveway.jpeg"
+          alt="New driveway installation in Tipperary by Tipperary Groundworks"
+          width="560"
+          height="380"
+          loading="lazy"
+        >
+        <div class="service-block__content">
+          <p class="eyebrow">Driveways</p>
+          <h3 id="service-driveways">Driveway Installation Tipperary</h3>
+          <hr class="divider-rule" aria-hidden="true">
+          <p>Your driveway is the first thing people see. A crumbling, potholed or outdated surface lets the whole property down — and it gets worse every winter. We install driveways that genuinely last: properly excavated, well sub-based and finished to the highest standard in tarmac, block paving or resin bound gravel.</p>
+          <p>We handle everything from breaking out the old surface and managing excavation depths to laying the final wearing course and finishing the edges neatly. The result is a driveway that looks sharp, handles traffic and shrugs off the Irish weather for years to come. No shortcuts. No bodge jobs.</p>
+          <p>Whether you're replacing an old cracked tarmac or starting from scratch on a new build, we'll give you a no-nonsense quote and a realistic timeline.</p>
+          <a href="/driveways-tipperary/" class="btn btn--outline-accent" style="margin-top:0.5rem;">Learn More About Driveways</a>
+        </div>
+      </article>
+
+      <!-- Patios -->
+      <article class="service-block reverse" aria-labelledby="service-patios">
+        <img
+          class="service-block__img"
+          src="/assets/images/porc1.jpeg"
+          alt="Patio installation in Tipperary — natural stone and porcelain paving"
+          width="560"
+          height="380"
+          loading="lazy"
+        >
+        <div class="service-block__content">
+          <p class="eyebrow">Patios</p>
+          <h3 id="service-patios">Patio Construction Tipperary</h3>
+          <hr class="divider-rule" aria-hidden="true">
+          <p>A well-built patio transforms how you use your outdoor space. But a badly installed one — laid on poor foundations without proper falls — will crack, sink and flood within a couple of seasons. We build patios that stay level, drain correctly and look great year after year, using quality natural stone, porcelain or concrete paving to suit your budget and style.</p>
+          <p>Every patio we lay starts with the right groundwork: correct excavation, a solid compacted sub-base, and precise falls away from the house. We take the time to set out patterns carefully and finish edges, steps and borders properly. It's the details that separate a solid patio from a problem one.</p>
+          <p>We work on patios of all sizes — from a simple back garden seating area to large entertaining spaces with integrated steps and borders. Get in touch and tell us what you have in mind.</p>
+          <a href="/patios-tipperary/" class="btn btn--outline-accent" style="margin-top:0.5rem;">Learn More About Patios</a>
+        </div>
+      </article>
+
+      <!-- Groundworks -->
+      <article class="service-block" aria-labelledby="service-groundworks">
+        <img
+          class="service-block__img"
+          src="/assets/images/general-ground.jpeg"
+          alt="Groundworks excavation and site preparation in County Tipperary"
+          width="560"
+          height="380"
+          loading="lazy"
+        >
+        <div class="service-block__content">
+          <p class="eyebrow">Groundworks</p>
+          <h3 id="service-groundworks">General Groundworks Tipperary</h3>
+          <hr class="divider-rule" aria-hidden="true">
+          <p>Good groundworks are the foundation of everything else. Get them wrong and it doesn't matter how good the surface looks — it will fail. Our groundworks service covers site preparation, excavation, sub-base installation, levelling and all the below-ground infrastructure your project needs to stand the test of time.</p>
+          <p>We work on residential and commercial groundworks projects throughout Tipperary — from preparing sites for new builds and extensions to sorting out drainage issues, land levelling and hard-standing areas for yards and car parks. If it involves the ground, we can handle it.</p>
+          <p>We use the right plant and equipment for the job and work efficiently to keep your project on schedule. Our team brings genuine expertise and a methodical approach — solid prep means a solid finish.</p>
+          <a href="/services/" class="btn btn--outline-accent" style="margin-top:0.5rem;">View All Services</a>
+        </div>
+      </article>
+
+      <!-- Pipe Laying -->
+      <article class="service-block reverse" aria-labelledby="service-pipe-laying">
+        <img
+          class="service-block__img"
+          src="/assets/images/piping.jpeg"
+          alt="Pipe laying and drainage installation in Tipperary"
+          width="560"
+          height="380"
+          loading="lazy"
+        >
+        <div class="service-block__content">
+          <p class="eyebrow">Pipe Laying</p>
+          <h3 id="service-pipe-laying">Pipe Laying &amp; Drainage Tipperary</h3>
+          <hr class="divider-rule" aria-hidden="true">
+          <p>Water in the wrong place causes serious damage. Whether you're installing a new drainage system, upgrading an existing one, or running supply and waste pipes for a new build or extension, our pipe laying team gets the work done properly — at the correct falls, bedded right and backfilled cleanly.</p>
+          <p>We install surface water drainage, foul drainage, French drains, soakaways and water supply infrastructure across County Tipperary. We also handle waste management system installations — all the groundworks and pipe runs needed before the above-ground finish goes in. Gary in Tipperary rated us five stars after we managed his entire waste management installation remotely, with clear photo updates at every stage.</p>
+          <p>No guesswork, no shortcuts. Pipe laying done right the first time saves you from costly and disruptive remedial work down the line.</p>
+          <a href="/services/" class="btn btn--outline-accent" style="margin-top:0.5rem;">View All Services</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- WHY CHOOSE US -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="home-why clip-bottom" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="home-why__header">
+        <p class="eyebrow">Why Tipperary Groundworks</p>
+        <h2 class="section-title" id="why-heading">The Difference Is In The Detail</h2>
+      </div>
+      <div class="why-cards">
+
+        <div class="why-card">
+          <svg class="why-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <h3>Fully Insured</h3>
+          <p>We carry full public liability insurance on every project. You're protected, and you can request our insurance details any time. Peace of mind, built in.</p>
+        </div>
+
+        <div class="why-card">
+          <svg class="why-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          <h3>Locally Based</h3>
+          <p>We're a Tipperary team, not a call centre operation. We know the roads, the ground conditions and the people. Quick response times, no sub-contractors you've never met.</p>
+        </div>
+
+        <div class="why-card">
+          <svg class="why-card__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          <h3>Photo Updates</h3>
+          <p>Every stage of the job is documented and shared with you. You'll always know what's happening, even if you can't be on site. No nasty surprises on completion.</p>
+        </div>
+
+        <div class="why-card">
+          <svg class="why-card__icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <h3>No Corners Cut</h3>
+          <p>Proper excavation depths, correct sub-bases, quality materials. We do the job right the first time so you're not dealing with problems six months later.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- PROCESS -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="home-process clip-top" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="home-process__header">
+        <p class="eyebrow">How It Works</p>
+        <h2 class="section-title" id="process-heading">From First Call to Finished Job</h2>
+        <p class="section-body" style="margin-top:1rem;">Getting groundworks done shouldn't be stressful. Here's exactly how we work — simple, transparent and on your schedule.</p>
+      </div>
+      <div class="process-steps">
+
+        <div class="process-step">
+          <div class="process-step__num" aria-hidden="true">01</div>
+          <div class="process-step__body">
+            <h3>Get in Touch</h3>
+            <p>Call, email or fill in the quote form. Tell us what you need and where you are in Tipperary. We'll get back to you fast — usually the same day.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step__num" aria-hidden="true">02</div>
+          <div class="process-step__body">
+            <h3>Free Site Visit &amp; Quote</h3>
+            <p>We visit the site, assess the job properly and give you a clear, itemised quote. No vague estimates. No surprises buried in the small print.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step__num" aria-hidden="true">03</div>
+          <div class="process-step__body">
+            <h3>We Get to Work</h3>
+            <p>Once you're happy to proceed, we schedule the work promptly. We turn up when we say we will, keep the site tidy and send you photo updates as we go.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step__num" aria-hidden="true">04</div>
+          <div class="process-step__body">
+            <h3>Clean Finish &amp; Sign-off</h3>
+            <p>We don't disappear until you're happy. Site cleared, edges neat, drainage checked. A finish you're proud of and a team you'd recommend.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- PRICING GUIDANCE -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="home-pricing" aria-labelledby="pricing-heading">
+    <div class="container">
+      <div class="home-pricing__header">
+        <p class="eyebrow">Pricing Guidance</p>
+        <h2 class="section-title" id="pricing-heading">What Does Groundworks Cost in Tipperary?</h2>
+        <p class="section-body" style="margin-top:1rem;">Every project is different, so we don't publish fixed price lists — that would be misleading. What we can tell you is what drives the cost, so you know what to expect before we visit.</p>
+      </div>
+      <div class="pricing-cards">
+
+        <div class="pricing-card">
+          <h3>Driveways</h3>
+          <p>Size is the biggest factor. A small single car driveway costs considerably less than a wide double or a sweeping front entrance. Surface material matters too — tarmac sits at the more affordable end, block paving in the middle, and resin bound gravel at the premium end. Existing surface removal, access constraints and sub-base condition all affect the final figure.</p>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Patios</h3>
+          <p>Square meterage drives patio pricing, alongside the material chosen. Budget concrete paving is more affordable; natural stone (sandstone, limestone, granite) or porcelain costs more but delivers a much better long-term result. Steps, raised sections, curved edges and integrated drainage channels add to the price — but also to the quality of the finished space.</p>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Groundworks</h3>
+          <p>General groundworks pricing depends on the scope of excavation, the volume of material to be removed, plant requirements and the nature of the site. Ground conditions in Tipperary vary — rock, clay and made-up ground all behave differently. A straightforward levelling job will cost less than a complex multi-stage site preparation for a new build.</p>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Pipe Laying</h3>
+          <p>Pipe laying costs are influenced by the length of run, pipe diameter, depth of excavation, and whether you need a complete drainage system or a single connection. Soakaways, inspection chambers and road crossings all add to the scope. We'll assess your exact requirements on site and give you a clear, detailed quote before any work begins.</p>
+        </div>
+
+      </div>
+      <p class="pricing-note">All quotes are free, no-obligation and itemised — so you know exactly what you're paying for. <a href="/contact/" style="color:var(--pd-accent);font-weight:700;">Request yours today →</a></p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- LOCAL AREA -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="home-area" aria-labelledby="area-heading">
+    <div class="container">
+      <div class="home-area__grid">
+
+        <div>
+          <p class="eyebrow">Our Service Area</p>
+          <h2 class="section-title" id="area-heading">Groundworks Across All of County Tipperary</h2>
+          <hr class="divider-rule" aria-hidden="true">
+          <p class="section-body">We're based in Tipperary Town and we work across the full county — from the Suir Valley up to the Devil's Bit and from the Galtee foothills across to the Slieveardagh Hills. If you're in Tipperary, we're your local groundworks team.</p>
+          <p class="section-body" style="margin-top:1rem;">We regularly work in Clonmel, Nenagh, Thurles, Carrick-on-Suir, Cahir, Roscrea, Templemore, Cashel and Newport — as well as the rural townlands and villages in between. No job is too far out of town. We quote travel honestly and won't sting you with hidden mileage charges.</p>
+          <p class="section-body" style="margin-top:1rem;">Not sure if we cover your area? Just give us a ring on <a href="tel:+353873566934" style="color:var(--pd-accent);font-weight:700;">087 356 6934</a> and we'll confirm straight away. Chances are, we do.</p>
+          <div class="area-towns" aria-label="Towns we serve in Tipperary">
+            <span class="area-town">Tipperary Town</span>
+            <span class="area-town">Clonmel</span>
+            <span class="area-town">Nenagh</span>
+            <span class="area-town">Thurles</span>
+            <span class="area-town">Carrick-on-Suir</span>
+            <span class="area-town">Cahir</span>
+            <span class="area-town">Roscrea</span>
+            <span class="area-town">Templemore</span>
+            <span class="area-town">Cashel</span>
+            <span class="area-town">Newport</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="eyebrow">Why Local Matters</p>
+          <h2 class="section-title" style="font-size:clamp(1.4rem,4.5vw,2rem);">We Know Tipperary Ground Conditions</h2>
+          <hr class="divider-rule" aria-hidden="true">
+          <p class="section-body">Tipperary is a county of varied geology — heavy clay soils in the Golden Vale, limestone bedrock in parts of the north, made-up ground around older town centres, and boggy patches in the hill fringes. That variety matters enormously in groundworks. Get the sub-base specification wrong for the ground conditions underfoot and you'll have problems within a season or two.</p>
+          <p class="section-body" style="margin-top:1rem;">Because we've worked across the county for years, we know what to expect and how to adapt. We don't apply a one-size-fits-all spec — we look at your specific site and spec accordingly. That local knowledge is something a national contractor coming in from outside Tipperary simply won't have.</p>
+          <p class="section-body" style="margin-top:1rem;">It also means we're quick to respond. No long lead times waiting for a crew to travel from Dublin or Cork. We're here, in the county, ready to get moving on your project.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- TESTIMONIALS -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="home-testimonials" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="home-testimonials__header">
+        <p class="eyebrow">What Our Customers Say</p>
+        <h2 class="section-title" id="testimonials-heading">Trusted By Tipperary Homeowners</h2>
+        <hr class="divider-rule" style="margin:0.9rem auto 0;" aria-hidden="true">
+      </div>
+      <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 star Google review">★★★★★</div>
+          <blockquote>
+            "Kevin and the team were brilliant to deal with, very professional job with updates throughout. We are delighted with the new outdoor space!"
+          </blockquote>
+          <p class="testimonial-card__author">— Kimberly, Tipperary</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 star Google review">★★★★★</div>
+          <blockquote>
+            "Tipperary Groundworks are the best. Dealing remotely with Kevin and his company were so professional, clear communication with lots of photos of the work at all stages was fantastic. I highly recommend this company for your waste management system."
+          </blockquote>
+          <p class="testimonial-card__author">— Gary, Tipperary</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- FAQ -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="home-faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="home-faq__header">
+        <p class="eyebrow">Common Questions</p>
+        <h2 class="section-title" id="faq-heading">Groundworks Tipperary — FAQ</h2>
+        <hr class="divider-rule" style="margin:0.9rem auto 0;" aria-hidden="true">
+        <p class="section-body" style="margin-top:1rem;">Everything you need to know before getting in touch. Can't find your question? Just give us a ring.</p>
+      </div>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary>What groundworks services do you offer in Tipperary?</summary>
+          <div class="faq-item__body">
+            <p>We offer a full range of groundworks services across County Tipperary including driveway installation (tarmac, block paving and resin bound), patio construction, pipe laying, drainage works and general groundworks for residential and commercial clients. Whether you need a simple garden patio or a complete site preparation for a new build, we have the experience and equipment to deliver.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Which areas of Tipperary do you cover?</summary>
+          <div class="faq-item__body">
+            <p>We cover the full county — Tipperary Town, Clonmel, Nenagh, Thurles, Carrick-on-Suir, Cahir, Roscrea, Templemore, Cashel and Newport, as well as surrounding rural townlands and villages in between. If you're not sure whether we cover your area, just call us on <a href="tel:+353873566934" style="color:var(--pd-accent);font-weight:700;">087 356 6934</a> and we'll confirm straight away.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How much does a new driveway cost in Tipperary?</summary>
+          <div class="faq-item__body">
+            <p>Driveway costs vary depending on size, access, the surface material chosen and any prep groundworks needed. Resin bound and block paving surfaces typically cost more than tarmac. There's also a difference in price between a straightforward replacement of an existing driveway and installing a completely new one from scratch. We provide free, no-obligation quotes tailored to your exact project — fill in the form below or give us a call to get an accurate figure.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How long does a driveway installation take?</summary>
+          <div class="faq-item__body">
+            <p>Most standard residential driveways are completed within 1–3 days once the groundwork preparation is done. Larger or more complex projects — those involving significant excavation, drainage work or bespoke block paving patterns — may take longer. We'll give you a realistic timeline at the quoting stage and stick to it. We know your time matters.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are you fully insured?</summary>
+          <div class="faq-item__body">
+            <p>Yes, Tipperary Groundworks carries full public liability insurance. You can request confirmation of our insurance at any point during the quoting or booking process — we're happy to provide it. We'd always encourage you to ask any contractor this question before work begins on your property.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I need planning permission for a new driveway or patio in Ireland?</summary>
+          <div class="faq-item__body">
+            <p>In most cases, residential driveway and patio work in Ireland does not require planning permission under exempted development rules — provided the materials used are permeable or drainage is properly managed so surface water doesn't run onto the public road. We can advise you on this during your free site consultation. For specific circumstances, it's always worth confirming with Tipperary County Council's planning department.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What is the best driveway surface for Irish weather?</summary>
+          <div class="faq-item__body">
+            <p>It depends on your budget, aesthetic preference and how the driveway is used. Resin bound gravel is increasingly popular — it offers a smart, low-maintenance finish with excellent drainage and holds up well in freeze-thaw cycles. Block paving is durable, highly customisable and individual blocks can be lifted for access to services underneath. Tarmac is the most cost-effective option and handles heavy vehicle use well. We'll walk you through the pros and cons of each during your free quote, so you can make the right call for your situation.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you handle pipe laying and drainage work?</summary>
+          <div class="faq-item__body">
+            <p>Yes, pipe laying is one of our core services. We install surface water drainage, foul drainage, French drains, soakaways and water supply infrastructure for both new builds and renovation projects throughout Tipperary. We also handle complete waste management system installations — all the groundworks and pipe runs needed before the above-ground elements go in. We've delivered these projects for clients managing remotely, providing detailed photo updates at every stage.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I get a quote?</summary>
+          <div class="faq-item__body">
+            <p>Three easy ways. Fill in the quote form at the bottom of this page and we'll be in touch quickly. Call us directly on <a href="tel:+353873566934" style="color:var(--pd-accent);font-weight:700;">087 356 6934</a>. Or send an email to <a href="mailto:tipperarygroundworks@gmail.com" style="color:var(--pd-accent);font-weight:700;">tipperarygroundworks@gmail.com</a>. We aim to respond to all enquiries promptly and can usually arrange a site visit at a time that suits you.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you work on commercial groundworks projects?</summary>
+          <div class="faq-item__body">
+            <p>Yes. Alongside residential work, we take on commercial groundworks contracts across Tipperary — including car park construction and resurfacing, yard and hard-standing areas, drainage for commercial buildings, and site preparation for new commercial developments. Get in touch to discuss your project requirements and we'll assess whether we're the right fit.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What preparation is needed before a new patio or driveway is laid?</summary>
+          <div class="faq-item__body">
+            <p>Good preparation is what makes a lasting surface. We excavate to the correct depth for the chosen surfacing material and ground conditions, remove all arisings from site, install a well-compacted granular sub-base, manage any drainage requirements and ensure a stable, even foundation before any surfacing is laid. Cutting corners on prep is the number-one cause of premature surface failure — cracking, sinking and frost heave are almost always a sub-base problem, not a surface problem. We don't cut those corners.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can you help with a complete outdoor space renovation?</summary>
+          <div class="faq-item__body">
+            <p>Absolutely. We work on complete outdoor transformations — combining driveways, patios, pathways, steps, edging and groundworks elements into a single, well-coordinated project. Having one team handle the whole job means better integration, cleaner finishes and no arguments between trades about who's responsible for what. Get in touch, tell us what you have in mind, and we'll put together a comprehensive quote.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- FINAL CTA / QUOTE FORM -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="home-cta" aria-labelledby="cta-heading" id="quote">
+    <div class="container">
+      <div class="home-cta__grid">
+
+        <div class="home-cta__copy">
+          <p class="eyebrow" style="border-left-color:var(--pd-accent);">Get Your Free Quote</p>
+          <h2 class="section-title" id="cta-heading">Ready to Get Started? Let's Talk.</h2>
+          <p>Don't put it off. Whether your driveway is crumbling, your patio is sinking or you need groundworks priced for a new build — the sooner you get in touch, the sooner we can sort it. Free quotes, fast turnaround, no hard sell.</p>
+          <p>Fill in the form and we'll get back to you quickly. Or if you'd rather just talk it through, give us a ring right now.</p>
+          <a href="tel:+353873566934" class="home-cta__tel" aria-label="Call Tipperary Groundworks on 087 356 6934">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.63a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .82h3a2 2 0 012 1.72c.13.96.36 1.9.69 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0122 16.92z"/></svg>
+            087 356 6934
+          </a>
+        </div>
+
+        <div class="quote-form">
+          <h2>Fast Free Quote</h2>
+          <form name="quote-home" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/">
+            <input type="hidden" name="form-name" value="quote-home">
+            <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+
+            <div class="form-group">
+              <label for="qh-name">Full Name</label>
+              <input type="text" id="qh-name" name="name" placeholder="Your name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="qh-email">Email Address</label>
+              <input type="email" id="qh-email" name="email" placeholder="your@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="qh-phone">Phone Number</label>
+              <input type="tel" id="qh-phone" name="phone" placeholder="08X XXX XXXX" required>
+            </div>
+
+            <div class="form-group">
+              <label for="qh-eircode">Eircode / Postcode</label>
+              <input type="text" id="qh-eircode" name="eircode" placeholder="e.g. E34 XY00" required>
+            </div>
+
+            <div class="form-group">
+              <label for="qh-message">Tell Us About Your Project</label>
+              <textarea id="qh-message" name="message" placeholder="What do you need? (driveway, patio, groundworks, pipe laying…)" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--accent form-submit">Send My Free Quote Request</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+{% endblock %}

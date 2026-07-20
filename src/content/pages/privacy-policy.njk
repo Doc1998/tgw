@@ -1,0 +1,329 @@
+---
+title: 'Privacy Policy | Tipperary Groundworks'
+description: 'Read the Tipperary Groundworks privacy policy. Learn how we collect, use and protect your personal data in line with Irish data protection law.'
+preloadImg: '/assets/images/privacy-policy-hero.jpg'
+permalink: '/privacy-policy/'
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<style>
+  :root {
+    --pd-primary: #292524;
+    --pd-accent: #B45309;
+    --pd-light: #F5F0E8;
+    --pd-white: #ffffff;
+    --pd-font-display: 'Barlow Condensed', sans-serif;
+    --pd-font-body: 'Barlow', sans-serif;
+  }
+
+  .tipperary-groundworks-privacy-policy *,
+  .tipperary-groundworks-privacy-policy *::before,
+  .tipperary-groundworks-privacy-policy *::after {
+    box-sizing: border-box;
+  }
+
+  .tipperary-groundworks-privacy-policy {
+    font-family: var(--pd-font-body);
+    color: var(--pd-primary);
+    background: var(--pd-white);
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  /* ── HERO ── */
+  .tipperary-groundworks-privacy-policy .privacy-hero {
+    background: var(--pd-primary);
+    color: var(--pd-white);
+    padding: 3.5rem 1.25rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+    padding-bottom: 5rem;
+  }
+
+  .tipperary-groundworks-privacy-policy .privacy-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/assets/images/privacy-policy-hero.jpg') center/cover no-repeat;
+    opacity: 0.12;
+    z-index: 0;
+  }
+
+  .tipperary-groundworks-privacy-policy .privacy-hero > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .tipperary-groundworks-privacy-policy .privacy-hero .eyebrow {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    border-left: 3px solid var(--pd-accent);
+    padding-left: 0.6rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .tipperary-groundworks-privacy-policy .privacy-hero h1 {
+    font-family: var(--pd-font-display);
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    line-height: 1.1;
+    margin: 0 0 0.75rem;
+  }
+
+  .tipperary-groundworks-privacy-policy .privacy-hero p {
+    font-size: 1rem;
+    color: #d6d3d1;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  /* ── CONTENT SECTION ── */
+  .tipperary-groundworks-privacy-policy .privacy-content {
+    background: var(--pd-white);
+    padding: 3.5rem 1.25rem 3rem;
+  }
+
+  .tipperary-groundworks-privacy-policy .privacy-content .inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .tipperary-groundworks-privacy-policy .privacy-content h2 {
+    font-family: var(--pd-font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--pd-primary);
+    margin: 2.2rem 0 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--pd-accent);
+    display: inline-block;
+  }
+
+  .tipperary-groundworks-privacy-policy .privacy-content h2:first-of-type {
+    margin-top: 0;
+  }
+
+  .tipperary-groundworks-privacy-policy .privacy-content p {
+    margin: 0.6rem 0 1rem;
+    color: #44403c;
+  }
+
+  .tipperary-groundworks-privacy-policy .privacy-content ul {
+    margin: 0.4rem 0 1rem 1.25rem;
+    padding: 0;
+    color: #44403c;
+  }
+
+  .tipperary-groundworks-privacy-policy .privacy-content ul li {
+    margin-bottom: 0.4rem;
+  }
+
+  .tipperary-groundworks-privacy-policy .privacy-content a {
+    color: var(--pd-accent);
+    text-decoration: underline;
+  }
+
+  .tipperary-groundworks-privacy-policy .privacy-content a:hover {
+    color: var(--pd-primary);
+  }
+
+  .tipperary-groundworks-privacy-policy .privacy-content .last-updated {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-family: var(--pd-font-display);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #78716c;
+    background: var(--pd-light);
+    padding: 0.3rem 0.7rem;
+    margin-bottom: 2rem;
+    border-left: 3px solid var(--pd-accent);
+  }
+
+  /* ── CTA BAND ── */
+  .tipperary-groundworks-privacy-policy .cta-band {
+    background: var(--pd-accent);
+    color: var(--pd-white);
+    padding: 3rem 1.25rem;
+    text-align: center;
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+    padding-top: 4.5rem;
+  }
+
+  .tipperary-groundworks-privacy-policy .cta-band h2 {
+    font-family: var(--pd-font-display);
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.6rem;
+  }
+
+  .tipperary-groundworks-privacy-policy .cta-band p {
+    font-size: 1rem;
+    margin: 0 0 1.5rem;
+    opacity: 0.92;
+  }
+
+  .tipperary-groundworks-privacy-policy .btn {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer;
+    border: none;
+  }
+
+  .tipperary-groundworks-privacy-policy .btn-white {
+    background: var(--pd-white);
+    color: var(--pd-accent);
+  }
+
+  .tipperary-groundworks-privacy-policy .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tipperary-groundworks-privacy-policy .btn {
+      transition: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .tipperary-groundworks-privacy-policy .privacy-content {
+      padding: 4rem 2rem 3.5rem;
+    }
+
+    .tipperary-groundworks-privacy-policy .privacy-hero {
+      padding: 5rem 2rem 6rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .tipperary-groundworks-privacy-policy .privacy-content {
+      padding: 5rem 2rem 4rem;
+    }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy | Tipperary Groundworks",
+  "description": "Read the Tipperary Groundworks privacy policy. Learn how we collect, use and protect your personal data in line with Irish data protection law.",
+  "url": "https://tipperarygroundworks.ie/privacy-policy/",
+  "inLanguage": "en-IE",
+  "publisher": {
+    "@type": "LocalBusiness",
+    "name": "Tipperary Groundworks",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tipperary",
+      "addressCountry": "IE"
+    },
+    "telephone": "+353873566934",
+    "email": "tipperarygroundworks@gmail.com"
+  }
+}
+</script>
+
+<div class="tipperary-groundworks-privacy-policy">
+
+  <!-- HERO -->
+  <section class="privacy-hero" aria-labelledby="privacy-h1">
+    <span class="eyebrow">Legal</span>
+    <h1 id="privacy-h1">Privacy Policy</h1>
+    <p>How Tipperary Groundworks collects, uses, and protects your personal data.</p>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="privacy-content" aria-label="Privacy policy content">
+    <div class="inner">
+
+      <span class="last-updated">Last updated: June 2025</span>
+
+      <h2>Who We Are</h2>
+      <p>Tipperary Groundworks is a groundworks, driveways, and patios contractor based in Tipperary, Ireland. We can be contacted at:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:tipperarygroundworks@gmail.com">tipperarygroundworks@gmail.com</a></li>
+        <li><strong>Phone:</strong> <a href="tel:+353873566934">+353 87 356 6934</a></li>
+      </ul>
+
+      <h2>What Data We Collect</h2>
+      <p>We only collect data that you actively provide to us. This includes:</p>
+      <ul>
+        <li>Your name</li>
+        <li>Your phone number and/or email address</li>
+        <li>Your address or project location</li>
+        <li>Details of the work you're enquiring about</li>
+      </ul>
+      <p>We do not collect sensitive personal data and we do not use cookies beyond what is strictly necessary for the website to function.</p>
+
+      <h2>How We Use Your Data</h2>
+      <p>Your data is used solely to:</p>
+      <ul>
+        <li>Respond to your quote or service enquiry</li>
+        <li>Arrange site visits or follow up on ongoing work</li>
+        <li>Send you information you've specifically requested</li>
+      </ul>
+      <p>We do not sell, rent, or share your personal data with third parties for marketing purposes.</p>
+
+      <h2>Meta Ads & Advertising</h2>
+      <p>We may run advertising campaigns via Meta (Facebook and Instagram). If you interact with our ads, Meta may collect certain data in line with their own privacy policy. We use this solely to reach people who may be interested in our services. You can manage your ad preferences directly via your Meta account settings.</p>
+
+      <h2>Data Retention</h2>
+      <p>We retain enquiry data only for as long as necessary to fulfil your request or as required by Irish law. If you'd like your data removed, simply contact us and we'll delete it promptly.</p>
+
+      <h2>Your Rights</h2>
+      <p>Under the General Data Protection Regulation (GDPR) and Irish data protection law, you have the right to:</p>
+      <ul>
+        <li>Access the personal data we hold about you</li>
+        <li>Request correction of inaccurate data</li>
+        <li>Request deletion of your data</li>
+        <li>Object to or restrict how we process your data</li>
+        <li>Lodge a complaint with the Data Protection Commission (DPC) at <a href="https://www.dataprotection.ie" target="_blank" rel="noopener">dataprotection.ie</a></li>
+      </ul>
+      <p>To exercise any of these rights, contact us at <a href="mailto:tipperarygroundworks@gmail.com">tipperarygroundworks@gmail.com</a>.</p>
+
+      <h2>Security</h2>
+      <p>We take reasonable technical and organisational measures to keep your data safe. Our website is served over HTTPS and enquiry forms are handled via Netlify's secure infrastructure.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>We may update this privacy policy from time to time. Any changes will be posted on this page with an updated date at the top. Continued use of our website after any changes constitutes your acceptance of the revised policy.</p>
+
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" aria-label="Contact call to action">
+    <h2>Ready to Get Started?</h2>
+    <p>Get in touch for a fast, free quote across Tipperary and surrounding areas.</p>
+    <a href="/contact/" class="btn btn-white">Get a Free Quote</a>
+  </section>
+
+</div>
+{% endblock %}

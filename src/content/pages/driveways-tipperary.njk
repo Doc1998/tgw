@@ -1,0 +1,1629 @@
+---
+title: 'Driveways Tipperary | Tipperary Groundworks'
+description: 'Expert driveways in Tipperary. Resin, tarmac, block paving & more. Fast free quotes, fully insured, serving Clonmel, Nenagh, Thurles & all of Co. Tipperary.'
+preloadImg: '/assets/images/driveways-hero.jpg'
+permalink: '/driveways-tipperary/'
+eleventyNavigation:
+  key: Driveways
+  order: 600
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<style>
+  :root {
+    --pd-primary: #292524;
+    --pd-accent: #B45309;
+    --pd-light: #F5F0E8;
+    --pd-white: #ffffff;
+    --pd-font-display: 'Barlow Condensed', sans-serif;
+    --pd-font-body: 'Barlow', sans-serif;
+  }
+
+  .tipperary-groundworks-driveways *,
+  .tipperary-groundworks-driveways *::before,
+  .tipperary-groundworks-driveways *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .tipperary-groundworks-driveways {
+    font-family: var(--pd-font-body);
+    color: var(--pd-primary);
+    background: var(--pd-white);
+    overflow-x: hidden;
+  }
+
+  /* ── BUTTONS ── */
+  .tipperary-groundworks-driveways .btn {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.85rem 1.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+  }
+  .tipperary-groundworks-driveways .btn:focus-visible {
+    outline: 3px solid var(--pd-accent);
+    outline-offset: 3px;
+  }
+  .tipperary-groundworks-driveways .btn-accent {
+    background: var(--pd-accent);
+    color: var(--pd-white);
+    border-color: var(--pd-accent);
+  }
+  .tipperary-groundworks-driveways .btn-accent:hover {
+    background: #92400E;
+    border-color: #92400E;
+    transform: translateY(-2px);
+  }
+  .tipperary-groundworks-driveways .btn-outline {
+    background: transparent;
+    color: var(--pd-white);
+    border-color: var(--pd-white);
+  }
+  .tipperary-groundworks-driveways .btn-outline:hover {
+    background: var(--pd-white);
+    color: var(--pd-primary);
+    transform: translateY(-2px);
+  }
+  .tipperary-groundworks-driveways .btn-outline-dark {
+    background: transparent;
+    color: var(--pd-primary);
+    border-color: var(--pd-primary);
+  }
+  .tipperary-groundworks-driveways .btn-outline-dark:hover {
+    background: var(--pd-primary);
+    color: var(--pd-white);
+    transform: translateY(-2px);
+  }
+
+  /* ── EYEBROW ── */
+  .tipperary-groundworks-driveways .eyebrow {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    border-left: 3px solid var(--pd-accent);
+    padding-left: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SECTION TITLES ── */
+  .tipperary-groundworks-driveways .section-title {
+    font-family: var(--pd-font-display);
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 1rem;
+  }
+  .tipperary-groundworks-driveways .section-title.light {
+    color: var(--pd-white);
+  }
+
+  .tipperary-groundworks-driveways .section-body {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #44403c;
+    max-width: 65ch;
+  }
+  .tipperary-groundworks-driveways .section-body.light {
+    color: #e7e5e4;
+  }
+
+  /* ══════════════════════════════
+     1. HERO
+  ══════════════════════════════ */
+  .tipperary-groundworks-driveways .driveways-hero {
+    position: relative;
+    min-height: 88vh;
+    display: flex;
+    align-items: flex-end;
+    background: url('/assets/images/driveways-hero.jpg') center center / cover no-repeat;
+  }
+  .tipperary-groundworks-driveways .driveways-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(20,15,10,0.88) 0%, rgba(20,15,10,0.45) 55%, rgba(20,15,10,0.15) 100%);
+    z-index: 1;
+  }
+  .tipperary-groundworks-driveways .hero-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 4rem;
+  }
+  .tipperary-groundworks-driveways .hero-inner h1 {
+    font-family: var(--pd-font-display);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--pd-white);
+    max-width: 18ch;
+    margin-bottom: 1rem;
+  }
+  .tipperary-groundworks-driveways .hero-inner h1 span {
+    color: var(--pd-accent);
+  }
+  .tipperary-groundworks-driveways .hero-sub {
+    font-size: 1.15rem;
+    color: #e7e5e4;
+    max-width: 52ch;
+    line-height: 1.55;
+    margin-bottom: 2rem;
+  }
+  .tipperary-groundworks-driveways .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-bottom: 2.5rem;
+  }
+  .tipperary-groundworks-driveways .hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+  .tipperary-groundworks-driveways .trust-pill {
+    font-family: var(--pd-font-display);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--pd-white);
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 2px;
+    padding: 0.35rem 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .tipperary-groundworks-driveways .trust-pill svg {
+    flex-shrink: 0;
+  }
+
+  /* ── diagonal clip ── */
+  .tipperary-groundworks-driveways .clip-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 48px), 0 100%);
+  }
+
+  /* ══════════════════════════════
+     2. INTRO
+  ══════════════════════════════ */
+  .tipperary-groundworks-driveways .driveways-intro {
+    background: var(--pd-light);
+    padding: 5rem 1.25rem 6rem;
+  }
+  .tipperary-groundworks-driveways .intro-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+  }
+  .tipperary-groundworks-driveways .intro-text {}
+  .tipperary-groundworks-driveways .intro-text p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #44403c;
+    margin-bottom: 1.25rem;
+    max-width: 62ch;
+  }
+  .tipperary-groundworks-driveways .intro-img {
+    position: relative;
+  }
+  .tipperary-groundworks-driveways .intro-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+  .tipperary-groundworks-driveways .intro-img::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px solid var(--pd-accent);
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .tipperary-groundworks-driveways .intro-img img {
+    position: relative;
+    z-index: 1;
+  }
+  .tipperary-groundworks-driveways .trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+  .tipperary-groundworks-driveways .badge {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 1.1rem;
+    background: var(--pd-white);
+    border-radius: 4px;
+    border-top: 3px solid var(--pd-accent);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+  .tipperary-groundworks-driveways .badge-label {
+    font-family: var(--pd-font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--pd-primary);
+  }
+  .tipperary-groundworks-driveways .badge-sub {
+    font-size: 0.78rem;
+    color: #78716c;
+  }
+  .tipperary-groundworks-driveways .stars {
+    color: #FBBF24;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* ══════════════════════════════
+     3. ALTERNATING SERVICE BLOCKS
+  ══════════════════════════════ */
+  .tipperary-groundworks-driveways .services-blocks {
+    background: var(--pd-white);
+    padding: 5rem 1.25rem;
+  }
+  .tipperary-groundworks-driveways .services-blocks-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .tipperary-groundworks-driveways .services-blocks-inner > .eyebrow,
+  .tipperary-groundworks-driveways .services-blocks-inner > .section-title {
+    text-align: center;
+    display: block;
+    border-left: none;
+    padding-left: 0;
+    margin-bottom: 0.5rem;
+  }
+  .tipperary-groundworks-driveways .services-blocks-inner > .section-title {
+    margin-bottom: 3.5rem;
+  }
+
+  .tipperary-groundworks-driveways .service-block {
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid #e7e5e4;
+  }
+  .tipperary-groundworks-driveways .service-block:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .tipperary-groundworks-driveways .service-block-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+  .tipperary-groundworks-driveways .service-block-text h3 {
+    font-family: var(--pd-font-display);
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--pd-primary);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+  .tipperary-groundworks-driveways .service-block-text h3::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--pd-accent);
+    margin-bottom: 0.75rem;
+  }
+  .tipperary-groundworks-driveways .service-block-text p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #44403c;
+    margin-bottom: 1rem;
+  }
+  .tipperary-groundworks-driveways .service-block-text .link-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--pd-font-display);
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    text-decoration: none;
+    border-bottom: 2px solid var(--pd-accent);
+    padding-bottom: 2px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .tipperary-groundworks-driveways .service-block-text .link-more:hover {
+    color: #92400E;
+    border-color: #92400E;
+  }
+
+  /* ══════════════════════════════
+     4. PROCESS
+  ══════════════════════════════ */
+  .tipperary-groundworks-driveways .driveways-process {
+    background: var(--pd-primary);
+    padding: 5rem 1.25rem 6rem;
+    clip-path: polygon(0 48px, 100% 0, 100% calc(100% - 48px), 0 100%);
+    margin: -2px 0;
+  }
+  .tipperary-groundworks-driveways .process-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .tipperary-groundworks-driveways .process-inner .eyebrow {
+    color: var(--pd-accent);
+    border-color: var(--pd-accent);
+    display: inline-block;
+    margin-bottom: 0.75rem;
+  }
+  .tipperary-groundworks-driveways .process-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .tipperary-groundworks-driveways .process-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-top: 3px solid var(--pd-accent);
+    border-radius: 4px;
+    padding: 2rem 1.5rem;
+    text-align: left;
+  }
+  .tipperary-groundworks-driveways .process-num {
+    font-family: var(--pd-font-display);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--pd-accent);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+  }
+  .tipperary-groundworks-driveways .process-card h3 {
+    font-family: var(--pd-font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--pd-white);
+    margin-bottom: 0.75rem;
+  }
+  .tipperary-groundworks-driveways .process-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #a8a29e;
+  }
+
+  /* ══════════════════════════════
+     5. WHY CHOOSE US
+  ══════════════════════════════ */
+  .tipperary-groundworks-driveways .driveways-why {
+    background: var(--pd-light);
+    padding: 5rem 1.25rem;
+  }
+  .tipperary-groundworks-driveways .why-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .tipperary-groundworks-driveways .why-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .tipperary-groundworks-driveways .why-card {
+    background: var(--pd-white);
+    border-radius: 4px;
+    border-top: 4px solid var(--pd-accent);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    padding: 2rem 1.5rem;
+    text-align: left;
+  }
+  .tipperary-groundworks-driveways .why-card-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--pd-accent);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .tipperary-groundworks-driveways .why-card-icon svg {
+    color: var(--pd-white);
+  }
+  .tipperary-groundworks-driveways .why-card h3 {
+    font-family: var(--pd-font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--pd-primary);
+    margin-bottom: 0.5rem;
+  }
+  .tipperary-groundworks-driveways .why-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #57534e;
+  }
+
+  /* ══════════════════════════════
+     PRICING SECTION
+  ══════════════════════════════ */
+  .tipperary-groundworks-driveways .driveways-pricing {
+    background: var(--pd-white);
+    padding: 5rem 1.25rem;
+    border-top: 2px solid #e7e5e4;
+  }
+  .tipperary-groundworks-driveways .pricing-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .tipperary-groundworks-driveways .pricing-intro {
+    max-width: 62ch;
+    margin-bottom: 2.5rem;
+  }
+  .tipperary-groundworks-driveways .pricing-intro p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #44403c;
+    margin-bottom: 1rem;
+  }
+  .tipperary-groundworks-driveways .pricing-grid {
+    display: grid;
+    gap: 1.25rem;
+  }
+  .tipperary-groundworks-driveways .price-card {
+    border-left: 4px solid var(--pd-accent);
+    background: var(--pd-light);
+    border-radius: 0 4px 4px 0;
+    padding: 1.5rem;
+  }
+  .tipperary-groundworks-driveways .price-card h3 {
+    font-family: var(--pd-font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--pd-primary);
+    margin-bottom: 0.4rem;
+  }
+  .tipperary-groundworks-driveways .price-card p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #57534e;
+  }
+  .tipperary-groundworks-driveways .pricing-note {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #78716c;
+    line-height: 1.6;
+    max-width: 62ch;
+  }
+
+  /* ══════════════════════════════
+     6. FAQ
+  ══════════════════════════════ */
+  .tipperary-groundworks-driveways .driveways-faq {
+    background: var(--pd-light);
+    padding: 5rem 1.25rem;
+    border-top: 2px solid #e7e5e4;
+  }
+  .tipperary-groundworks-driveways .faq-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .tipperary-groundworks-driveways .faq-inner .section-title {
+    margin-bottom: 0.5rem;
+  }
+  .tipperary-groundworks-driveways .faq-intro {
+    font-size: 1rem;
+    color: #57534e;
+    margin-bottom: 3rem;
+    line-height: 1.65;
+  }
+  .tipperary-groundworks-driveways .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    text-align: left;
+    border-top: 2px solid #d6d3d1;
+  }
+  .tipperary-groundworks-driveways .faq-item {
+    border-bottom: 1px solid #d6d3d1;
+  }
+  .tipperary-groundworks-driveways .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.25rem 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    cursor: pointer;
+    font-family: var(--pd-font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--pd-primary);
+    text-align: left;
+    line-height: 1.3;
+  }
+  .tipperary-groundworks-driveways .faq-question:focus-visible {
+    outline: 3px solid var(--pd-accent);
+    outline-offset: 2px;
+  }
+  .tipperary-groundworks-driveways .faq-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    background: var(--pd-accent);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+    margin-top: 2px;
+  }
+  .tipperary-groundworks-driveways .faq-icon svg {
+    transition: transform 0.25s ease;
+    color: var(--pd-white);
+  }
+  .tipperary-groundworks-driveways .faq-item.open .faq-icon svg {
+    transform: rotate(45deg);
+  }
+  .tipperary-groundworks-driveways .faq-answer {
+    display: none;
+    padding: 0 0 1.5rem;
+  }
+  .tipperary-groundworks-driveways .faq-item.open .faq-answer {
+    display: block;
+  }
+  .tipperary-groundworks-driveways .faq-answer p {
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: #44403c;
+  }
+
+  /* ══════════════════════════════
+     7. TESTIMONIALS
+  ══════════════════════════════ */
+  .tipperary-groundworks-driveways .driveways-testimonials {
+    background: var(--pd-primary);
+    padding: 5rem 1.25rem;
+    clip-path: polygon(0 48px, 100% 0, 100% calc(100% - 48px), 0 100%);
+    margin: -1px 0;
+  }
+  .tipperary-groundworks-driveways .testimonials-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .tipperary-groundworks-driveways .testimonials-inner .eyebrow {
+    color: var(--pd-accent);
+    border-color: var(--pd-accent);
+    display: inline-block;
+  }
+  .tipperary-groundworks-driveways .testimonials-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .tipperary-groundworks-driveways .testi-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-top: 3px solid var(--pd-accent);
+    border-radius: 4px;
+    padding: 2rem 1.5rem;
+    text-align: left;
+  }
+  .tipperary-groundworks-driveways .testi-card .stars {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  .tipperary-groundworks-driveways .testi-text {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #e7e5e4;
+    margin-bottom: 1.25rem;
+    font-style: italic;
+  }
+  .tipperary-groundworks-driveways .testi-author {
+    font-family: var(--pd-font-display);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--pd-accent);
+  }
+
+  /* ══════════════════════════════
+     8. AREAS SERVED
+  ══════════════════════════════ */
+  .tipperary-groundworks-driveways .driveways-areas {
+    background: var(--pd-white);
+    padding: 5rem 1.25rem;
+  }
+  .tipperary-groundworks-driveways .areas-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .tipperary-groundworks-driveways .areas-inner .eyebrow {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .tipperary-groundworks-driveways .areas-text {
+    max-width: 62ch;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #44403c;
+    margin: 1.5rem 0 2.5rem;
+  }
+  .tipperary-groundworks-driveways .area-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .tipperary-groundworks-driveways .area-chip {
+    font-family: var(--pd-font-display);
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--pd-primary);
+    border: 2px solid var(--pd-primary);
+    border-radius: 2px;
+    padding: 0.4rem 0.85rem;
+    transition: background 0.15s, color 0.15s;
+  }
+  .tipperary-groundworks-driveways .area-chip:hover {
+    background: var(--pd-primary);
+    color: var(--pd-white);
+  }
+
+  /* ══════════════════════════════
+     CTA BAND
+  ══════════════════════════════ */
+  .tipperary-groundworks-driveways .cta-band {
+    background: var(--pd-accent);
+    padding: 3.5rem 1.25rem;
+    text-align: center;
+  }
+  .tipperary-groundworks-driveways .cta-band h2 {
+    font-family: var(--pd-font-display);
+    font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--pd-white);
+    margin-bottom: 0.75rem;
+  }
+  .tipperary-groundworks-driveways .cta-band p {
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  .tipperary-groundworks-driveways .cta-band .btn-white {
+    background: var(--pd-white);
+    color: var(--pd-accent);
+    border-color: var(--pd-white);
+    font-family: var(--pd-font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.9rem 2rem;
+    border-radius: 4px;
+    display: inline-block;
+    transition: transform 0.15s, background 0.15s;
+  }
+  .tipperary-groundworks-driveways .cta-band .btn-white:hover {
+    transform: translateY(-2px);
+    background: #f5f5f5;
+  }
+  .tipperary-groundworks-driveways .cta-band-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  /* ══════════════════════════════
+     QUOTE FORM
+  ══════════════════════════════ */
+  .tipperary-groundworks-driveways .driveways-quote {
+    background: var(--pd-light);
+    padding: 5rem 1.25rem;
+    border-top: 2px solid #e7e5e4;
+  }
+  .tipperary-groundworks-driveways .quote-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .tipperary-groundworks-driveways .quote-form {
+    margin-top: 2.5rem;
+    text-align: left;
+  }
+  .tipperary-groundworks-driveways .form-row {
+    display: grid;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .tipperary-groundworks-driveways .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .tipperary-groundworks-driveways .form-group label {
+    font-family: var(--pd-font-display);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--pd-primary);
+  }
+  .tipperary-groundworks-driveways .form-group input,
+  .tipperary-groundworks-driveways .form-group select,
+  .tipperary-groundworks-driveways .form-group textarea {
+    font-family: var(--pd-font-body);
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid #d6d3d1;
+    border-radius: 4px;
+    background: var(--pd-white);
+    color: var(--pd-primary);
+    transition: border-color 0.15s;
+    width: 100%;
+  }
+  .tipperary-groundworks-driveways .form-group input:focus,
+  .tipperary-groundworks-driveways .form-group select:focus,
+  .tipperary-groundworks-driveways .form-group textarea:focus {
+    outline: none;
+    border-color: var(--pd-accent);
+  }
+  .tipperary-groundworks-driveways .form-group textarea {
+    resize: vertical;
+    min-height: 110px;
+  }
+  .tipperary-groundworks-driveways .form-submit {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-family: var(--pd-font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--pd-accent);
+    color: var(--pd-white);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    transition: background 0.15s, transform 0.15s;
+    margin-top: 0.5rem;
+  }
+  .tipperary-groundworks-driveways .form-submit:hover {
+    background: #92400E;
+    transform: translateY(-2px);
+  }
+  .tipperary-groundworks-driveways .form-submit:focus-visible {
+    outline: 3px solid var(--pd-primary);
+    outline-offset: 3px;
+  }
+
+  /* ══════════════════════════════
+     RESPONSIVE
+  ══════════════════════════════ */
+  @media (min-width: 768px) {
+    .tipperary-groundworks-driveways .intro-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+    .tipperary-groundworks-driveways .intro-inner .intro-img {
+      order: 2;
+    }
+    .tipperary-groundworks-driveways .intro-inner .intro-text {
+      order: 1;
+    }
+    .tipperary-groundworks-driveways .service-block {
+      grid-template-columns: 1fr 1fr;
+    }
+    .tipperary-groundworks-driveways .service-block.reversed .service-block-img {
+      order: 2;
+    }
+    .tipperary-groundworks-driveways .service-block.reversed .service-block-text {
+      order: 1;
+    }
+    .tipperary-groundworks-driveways .process-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .tipperary-groundworks-driveways .why-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .tipperary-groundworks-driveways .pricing-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .tipperary-groundworks-driveways .testimonials-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .tipperary-groundworks-driveways .form-row.two-col {
+      grid-template-columns: 1fr 1fr;
+    }
+    .tipperary-groundworks-driveways .section-title {
+      font-size: 2.4rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .tipperary-groundworks-driveways .process-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .tipperary-groundworks-driveways .why-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .tipperary-groundworks-driveways .testimonials-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .tipperary-groundworks-driveways .section-title {
+      font-size: 2.75rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tipperary-groundworks-driveways .btn,
+    .tipperary-groundworks-driveways .faq-icon svg {
+      transition: none;
+    }
+  }
+</style>
+
+<!-- ── JSON-LD: LocalBusiness / Service ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Tipperary Groundworks",
+  "url": "https://tipperarygroundworks.ie",
+  "telephone": "+353873566934",
+  "email": "tipperarygroundworks@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tipperary",
+    "addressRegion": "County Tipperary",
+    "addressCountry": "IE"
+  },
+  "description": "Expert driveways in Tipperary — resin bound, tarmac, block paving and more. Serving Clonmel, Nenagh, Thurles, Cashel and all of County Tipperary.",
+  "areaServed": [
+    "Tipperary Town","Clonmel","Nenagh","Thurles","Carrick-on-Suir","Cahir","Roscrea","Templemore","Cashel","Newport"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Driveway Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Resin Bound Driveways Tipperary" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tarmac Driveways Tipperary" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Block Paving Driveways Tipperary" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gravel & Decorative Stone Driveways Tipperary" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Driveways Tipperary" } }
+    ]
+  }
+}
+</script>
+
+<!-- ── JSON-LD: FAQPage ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What types of driveways do you install in Tipperary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We install a full range of driveway surfaces across County Tipperary, including resin bound, tarmac (asphalt), block paving, concrete, and decorative gravel or stone driveways. During your free consultation we'll help you choose the best surface for your budget, property style, and ground conditions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a new driveway take to install?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most residential driveways are completed within 1–4 days, depending on the size, surface type, and the extent of any groundworks required. Resin and tarmac driveways tend to be quicker, while block paving or concrete driveways with complex patterns or major ground preparation can take a little longer. We'll give you a realistic timeframe in your quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need planning permission for a new driveway in Ireland?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most cases, replacing or upgrading a driveway in front of a house does not require planning permission in Ireland, provided the surface is permeable or water is directed to a soakaway or drainage system on the property. SuDS-compliant (sustainable drainage) surfaces like resin bound aggregate are especially well suited. If your property is in a protected structure or an Architectural Conservation Area, you should check with Tipperary County Council first. We're happy to advise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a new driveway cost in Tipperary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Driveway costs vary considerably depending on size, surface type, access, existing ground conditions, and drainage requirements. Gravel is typically the most affordable option, tarmac and concrete sit in the mid-range, and resin bound or block paving tend to carry a higher price per square metre due to the skill and materials involved. The best way to get an accurate figure is to request your free no-obligation quote from us."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a resin bound driveway a good choice in Tipperary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Resin bound driveways are one of the most popular choices in Tipperary and across Ireland right now. They're fully permeable, highly durable, low maintenance, and available in a wide range of aggregate colours and finishes that complement both modern and traditional homes. They also meet SuDS planning requirements, making them a practical as well as attractive option."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long will my new driveway last?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With proper installation and basic maintenance, a quality driveway should last many years. Resin bound and block paving driveways are known for their longevity when professionally installed on a well-prepared sub-base. Tarmac driveways are also very durable and can be resealed to extend their life further. We focus on getting the sub-base right — that's what makes the real difference to how long any driveway lasts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle drainage and groundworks as part of the driveway installation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. As a full groundworks and driveway contractor, we handle everything in-house — from excavation and sub-base preparation to drainage, kerbing, edging, and the finished surface. You don't need to hire multiple contractors. We assess drainage requirements as part of every site visit and ensure water is managed correctly from the outset."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer a guarantee on your driveway work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We stand over everything we install. Should any issues arise from our workmanship, we'll come back and sort it — no arguments. We'll always be clear about what's covered before work begins. Our reputation in Tipperary is built on finishing jobs properly the first time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you fully insured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Tipperary Groundworks is fully insured for public liability and employer's liability. You can have complete peace of mind that any work carried out on your property is properly covered."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas of Tipperary do you cover for driveway installation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We cover all of County Tipperary, including Tipperary Town, Clonmel, Nenagh, Thurles, Carrick-on-Suir, Cahir, Roscrea, Templemore, Cashel, and Newport, plus the surrounding rural areas. If you're unsure whether we cover your area, just give us a call or drop us an email."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get a quote for a driveway in Tipperary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Getting a quote is simple and completely free. You can call us directly on +353873566934, email us at tipperarygroundworks@gmail.com, or fill in the quick quote form on this page. We'll arrange a convenient time to visit, assess the site, and give you a clear, itemised, no-obligation quote — usually within a day or two."
+      }
+    }
+  ]
+}
+</script>
+
+<div class="tipperary-groundworks-driveways">
+
+  <!-- ══════════════════════════════
+       1. HERO
+  ══════════════════════════════ -->
+  <section class="driveways-hero clip-bottom" aria-labelledby="hero-heading">
+    <div class="hero-inner">
+      <p class="eyebrow" style="color:#FBBF24;border-color:#FBBF24;">Tipperary's Trusted Groundworks Team</p>
+      <h1 id="hero-heading">
+        <span>Driveways</span><br>Tipperary
+      </h1>
+      <p class="hero-sub">Resin, tarmac, block paving, and more — expertly installed by a local team who actually show up, keeps you updated, and finishes the job right.</p>
+      <div class="hero-ctas">
+        <a href="/contact/" class="btn btn-accent">Get a Fast Free Quote</a>
+        <a href="tel:+353873566934" class="btn btn-outline">&#9742; Call Now</a>
+      </div>
+      <div class="hero-trust" role="list" aria-label="Trust signals">
+        <div class="trust-pill" role="listitem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Fully Insured
+        </div>
+        <div class="trust-pill" role="listitem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Free No-Obligation Quotes
+        </div>
+        <div class="trust-pill" role="listitem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          All of Co. Tipperary Covered
+        </div>
+        <div class="trust-pill" role="listitem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Years of Local Experience
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       2. INTRO / OVERVIEW
+  ══════════════════════════════ -->
+  <section class="driveways-intro" aria-labelledby="intro-heading">
+    <div class="intro-inner">
+      <div class="intro-text">
+        <p class="eyebrow">Driveways Tipperary</p>
+        <h2 class="section-title" id="intro-heading">Driveways That Last — Built the Right Way in Tipperary</h2>
+        <p>A crumbling, potholed driveway isn't just an eyesore — it drags down the entire kerb appeal of your home and can cause real drainage headaches down the line. Whether you're dealing with an uneven tarmac surface that's been patched one too many times, a muddy gravel entrance that turns into a quagmire every winter, or you simply want to give your property a fresh, clean look, Tipperary Groundworks is the local team to call. We've been transforming driveways across County Tipperary for years — and we treat every job, big or small, with the same level of care and craft.</p>
+        <p>What sets us apart is simple: we do the groundwork properly. Every lasting driveway starts well below the surface — with correctly prepared sub-base, sound drainage, and well-laid edging. Skip those steps and even the finest surface will fail within a few years. Our team handles excavation, ground preparation, drainage, kerbing, and the finished surface all under one roof. No subcontractors, no passing the buck, no surprise extras. Just straight-talking tradespeople who take pride in their work and keep you in the loop from start to finish.</p>
+        <p>We cover all of County Tipperary — from Tipperary Town to Clonmel, Nenagh to Thurles and everywhere in between. Call us today for a completely free, no-obligation site visit and written quote.</p>
+        <div class="trust-badges" role="list" aria-label="Trust credentials">
+          <div class="badge" role="listitem">
+            <div>
+              <div class="stars" aria-label="5 stars">★★★★★</div>
+              <div class="badge-label">5-Star Reviews</div>
+              <div class="badge-sub">Google Verified</div>
+            </div>
+          </div>
+          <div class="badge" role="listitem">
+            <div>
+              <div class="badge-label">Fully Insured</div>
+              <div class="badge-sub">Public & Employer Liability</div>
+            </div>
+          </div>
+          <div class="badge" role="listitem">
+            <div>
+              <div class="badge-label">Local Experience</div>
+              <div class="badge-sub">Serving all of Co. Tipperary</div>
+            </div>
+          </div>
+          <div class="badge" role="listitem">
+            <div>
+              <div class="badge-label">Free Quotes</div>
+              <div class="badge-sub">No obligation, no pressure</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="intro-img">
+        <img src="/assets/images/driveways-intro.jpg" alt="Completed resin bound driveway in Tipperary Town" width="600" height="450" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       3. ALTERNATING SERVICE BLOCKS
+  ══════════════════════════════ -->
+  <section class="services-blocks" aria-labelledby="services-heading">
+    <div class="services-blocks-inner">
+      <p class="eyebrow">What We Install</p>
+      <h2 class="section-title" id="services-heading">Our Driveway Services in Tipperary</h2>
+
+      <!-- Resin Bound -->
+      <div class="service-block">
+        <div class="service-block-img">
+          <img src="/assets/images/driveways-resin.jpg" alt="Resin bound driveway installation in Tipperary" width="580" height="400" loading="lazy">
+        </div>
+        <div class="service-block-text">
+          <h3 id="resin-driveways">Resin Bound Driveways</h3>
+          <p>Resin bound driveways are the fastest-growing choice for homeowners across Tipperary — and it's easy to see why. A blend of natural aggregate stone and clear UV-stable resin is mixed and trowelled to a seamless, smooth finish that looks stunning and performs brilliantly. The surface is fully permeable, meaning rainwater drains through rather than pooling — making it compliant with SuDS planning requirements and a smart choice for properties prone to surface water issues.</p>
+          <p>We source quality aggregates in a wide range of colours and blends, so you can match your home's character — from warm amber tones that complement traditional Irish stone to cool greys that suit modern builds. Resin bound is also low maintenance: no weeds pushing through, no loose stones pinging against the car, and no staining from oil or leaves.</p>
+          <p>Properly installed on a sound sub-base, a resin bound driveway is one of the most durable and attractive investments you can make in your property's exterior. We carry out every installation ourselves — no third-party laying crews.</p>
+          <a href="/contact/" class="link-more" aria-label="Get a quote for resin bound driveways in Tipperary">Get a Free Quote →</a>
+        </div>
+      </div>
+
+      <!-- Tarmac -->
+      <div class="service-block reversed">
+        <div class="service-block-img">
+          <img src="/assets/images/driveways-tarmac.jpg" alt="Tarmac driveway laid in Clonmel, County Tipperary" width="580" height="400" loading="lazy">
+        </div>
+        <div class="service-block-text">
+          <h3 id="tarmac-driveways">Tarmac Driveways</h3>
+          <p>Tarmac remains one of the most popular and cost-effective driveway options in Ireland — and when it's laid correctly, it's also one of the most reliable. A properly constructed tarmac driveway starts with thorough excavation, a well-compacted hardcore sub-base, and carefully graded falls to direct water away from the property. Get that foundation right and the surface will serve you for many years with minimal upkeep.</p>
+          <p>We use quality hot-rolled asphalt and compact it with the appropriate machinery to achieve a consistent, professional finish. Tarmac is particularly well suited to larger driveways where cost per square metre is a priority, or properties with heavier vehicle use. It can also be resurfaced rather than fully replaced when it does eventually show wear, making it a genuinely long-term investment.</p>
+          <p>From new installations to resurfacing worn driveways across Tipperary, our tarmac crews are experienced, efficient, and tidy — we leave your site clean and your new driveway ready to use in short order.</p>
+          <a href="/contact/" class="link-more" aria-label="Get a quote for tarmac driveways in Tipperary">Get a Free Quote →</a>
+        </div>
+      </div>
+
+      <!-- Block Paving -->
+      <div class="service-block">
+        <div class="service-block-img">
+          <img src="/assets/images/driveways-block-paving.jpg" alt="Block paving driveway installed in Cashel, Tipperary" width="580" height="400" loading="lazy">
+        </div>
+        <div class="service-block-text">
+          <h3 id="block-paving">Block Paving Driveways</h3>
+          <p>Block paving brings a level of character and kerb appeal that no other surface quite matches. Individual paving bricks or flags are laid in patterns — herringbone, basket weave, stretcher bond — to create a driveway that genuinely enhances your home's appearance. Because individual blocks can be lifted and replaced, it's also practical: if a utility needs access beneath, there's no need to break up and relay an entire surface.</p>
+          <p>We work with a range of block types and colours — concrete blocks, natural stone setts, and clay pavers — and we'll advise on what suits your property style, budget, and ground conditions. Good edge restraints and correct jointing compound are critical to a long-lasting result, and these are details we never cut corners on.</p>
+          <p>Block paving does require a little more preparation time than tarmac or resin, but the finished result is a driveway that genuinely adds value to your home — and that's a worthwhile investment for many Tipperary homeowners.</p>
+          <a href="/contact/" class="link-more" aria-label="Get a quote for block paving driveways in Tipperary">Get a Free Quote →</a>
+        </div>
+      </div>
+
+      <!-- Concrete -->
+      <div class="service-block reversed">
+        <div class="service-block-img">
+          <img src="/assets/images/driveways-concrete.jpg" alt="Concrete driveway finished in Nenagh, Tipperary" width="580" height="400" loading="lazy">
+        </div>
+        <div class="service-block-text">
+          <h3 id="concrete-driveways">Concrete Driveways</h3>
+          <p>Concrete is the workhorse of driveway surfaces — rock solid, incredibly durable, and low maintenance once cured. It's an excellent choice for properties with heavy vehicle traffic, farm entrances, or anywhere you need maximum load-bearing capacity. Reinforced concrete driveways can also be finished in various ways — brushed, exposed aggregate, or patterned — to give a more decorative result if appearance is important.</p>
+          <p>The key to a concrete driveway that doesn't crack, shift, or spall is correct mix design, proper sub-base preparation, correct reinforcement, and well-placed expansion joints. Our team has the experience to get all of these details right, ensuring your concrete driveway remains solid and crack-free for many years to come.</p>
+          <p>We also handle all associated groundworks — excavation, levelling, drainage, and edging — as part of every concrete driveway installation across County Tipperary.</p>
+          <a href="/contact/" class="link-more" aria-label="Get a quote for concrete driveways in Tipperary">Get a Free Quote →</a>
+        </div>
+      </div>
+
+      <!-- Gravel & Decorative Stone -->
+      <div class="service-block">
+        <div class="service-block-img">
+          <img src="/assets/images/driveways-gravel.jpg" alt="Gravel and decorative stone driveway in Thurles, Tipperary" width="580" height="400" loading="lazy">
+        </div>
+        <div class="service-block-text">
+          <h3 id="gravel-driveways">Gravel & Decorative Stone Driveways</h3>
+          <p>Gravel remains a popular, cost-effective, and visually appealing choice for driveways across rural and semi-rural Tipperary. A properly installed gravel driveway — with a sound compacted sub-base, a root-barrier membrane, solid edging restraints, and the right stone size and depth — is a practical, attractive, and long-lasting option. The key word is "properly": a gravel drive thrown down without correct preparation will spread, sink, and grow weeds within a season.</p>
+          <p>We install gravel driveways with the same care as any other surface: correct excavation, membrane installation, compacted stone base, quality edging, and a generous layer of your chosen gravel or decorative stone — pea gravel, slate chippings, crushed limestone, golden granite, and more. The result is a driveway that looks well, drains freely, and stays in place.</p>
+          <p>Gravel is also a brilliant option if you're on a tighter budget but still want a smart, well-finished entrance — and it can always be upgraded to resin bound at a later stage.</p>
+          <a href="/contact/" class="link-more" aria-label="Get a quote for gravel driveways in Tipperary">Get a Free Quote →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       PRICING GUIDANCE
+  ══════════════════════════════ -->
+  <section class="driveways-pricing" aria-labelledby="pricing-heading">
+    <div class="pricing-inner">
+      <p class="eyebrow">Pricing Guidance</p>
+      <h2 class="section-title" id="pricing-heading">What Does a New Driveway Cost in Tipperary?</h2>
+      <div class="pricing-intro">
+        <p>We know that cost is one of the first things on your mind — and we'll always be upfront about it. Driveway pricing in Ireland varies considerably depending on a number of factors, and any contractor who gives you a firm price without seeing the site is guessing. That said, here's an honest guide to what typically drives cost, and the general price landscape for different surface types.</p>
+        <p>As a broad rule, gravel and tarmac tend to be the most accessible options per square metre, concrete and block paving sit in the mid-to-higher range, and resin bound driveways — while carrying a higher cost per square metre — often represent excellent long-term value given their longevity and minimal maintenance needs. Every quote we issue is fully itemised so you know exactly what you're paying for.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Gravel Driveways</h3>
+          <p>Generally the most affordable option. Cost rises with size, edging complexity, and stone type. Great value for rural entrances and larger properties where budget is a priority.</p>
+        </div>
+        <div class="price-card">
+          <h3>Tarmac Driveways</h3>
+          <p>Mid-range cost per square metre. Price is driven by total area, excavation depth required, drainage needs, and whether kerbing or edging is being installed. Very competitive for larger areas.</p>
+        </div>
+        <div class="price-card">
+          <h3>Resin Bound Driveways</h3>
+          <p>Higher cost per square metre than tarmac or gravel, reflecting the quality of materials and skill involved. Offset by extremely low maintenance costs and outstanding longevity. Highly popular in Tipperary right now.</p>
+        </div>
+        <div class="price-card">
+          <h3>Block Paving</h3>
+          <p>Costs vary with block type, pattern complexity, and edging requirements. Natural stone setts carry a premium over concrete blocks. The most labour-intensive option — and the most impactful on kerb appeal.</p>
+        </div>
+        <div class="price-card">
+          <h3>Concrete Driveways</h3>
+          <p>Mid-to-upper range depending on reinforcement, finish type, and drainage. Extremely durable and low maintenance once laid. Cost-effective over a long time horizon.</p>
+        </div>
+        <div class="price-card">
+          <h3>Key Cost Factors</h3>
+          <p>All driveway prices are affected by: total area (m²), existing surface removal, excavation depth, drainage work required, ground conditions, access for machinery, and your choice of edging or kerbing.</p>
+        </div>
+      </div>
+      <p class="pricing-note">&#9888; We do not publish set prices online because every site is different. The only accurate price is one based on a proper site visit. Our quotes are free, no-obligation, and issued in writing — call <a href="tel:+353873566934" style="color:var(--pd-accent);font-weight:700;">+353 87 356 6934</a> or fill in the form below to book yours.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       4. PROCESS / HOW IT WORKS
+  ══════════════════════════════ -->
+  <section class="driveways-process" aria-labelledby="process-heading">
+    <div class="process-inner">
+      <p class="eyebrow">How It Works</p>
+      <h2 class="section-title light" id="process-heading">Your New Driveway in 4 Simple Steps</h2>
+      <p class="section-body light" style="max-width:52ch;margin:0 auto;">No stress, no surprises. Here's exactly what happens when you get in touch with Tipperary Groundworks.</p>
+      <div class="process-grid" role="list">
+        <div class="process-card" role="listitem">
+          <div class="process-num" aria-hidden="true">01</div>
+          <h3>Get in Touch</h3>
+          <p>Call us, email us, or fill in the quote form on this page. Tell us roughly what you're after and where you are in Tipperary — that's all we need to get the ball rolling.</p>
+        </div>
+        <div class="process-card" role="listitem">
+          <div class="process-num" aria-hidden="true">02</div>
+          <h3>Free Site Visit & Quote</h3>
+          <p>We come out to you at a time that suits. We assess the ground conditions, drainage, access, and your requirements — then issue a clear, itemised written quote. No obligation, no pressure.</p>
+        </div>
+        <div class="process-card" role="listitem">
+          <div class="process-num" aria-hidden="true">03</div>
+          <h3>We Do the Work</h3>
+          <p>Our crew arrives on the agreed date and gets straight to it. We handle every stage — excavation, sub-base, drainage, kerbing, surface installation — keeping you updated throughout. We leave your site clean and tidy.</p>
+        </div>
+        <div class="process-card" role="listitem">
+          <div class="process-num" aria-hidden="true">04</div>
+          <h3>Aftercare & Guarantee</h3>
+          <p>Once the job is complete we walk you through the finished work and give you any aftercare advice relevant to your surface type. We stand over our workmanship — if anything isn't right, we'll fix it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       5. WHY CHOOSE US
+  ══════════════════════════════ -->
+  <section class="driveways-why" aria-labelledby="why-heading">
+    <div class="why-inner">
+      <p class="eyebrow">Why Choose Us</p>
+      <h2 class="section-title" id="why-heading">Why Tipperary Homeowners Choose Us</h2>
+      <p class="section-body" style="margin:0 auto;">We're a local team. Your neighbours hire us, review us, and recommend us. Here's what keeps them coming back.</p>
+      <div class="why-grid" role="list">
+        <div class="why-card" role="listitem">
+          <div class="why-card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3>5-Star Rated Locally</h3>
+          <p>Our Google reviews speak for themselves. Customers across Tipperary consistently praise our communication, quality of workmanship, and the fact that we actually show up when we say we will — a rarer quality than it should be.</p>
+        </div>
+        <div class="why-card" role="listitem">
+          <div class="why-card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Fully Insured</h3>
+          <p>Tipperary Groundworks carries full public liability and employer's liability insurance. Every job we undertake is fully covered — giving you complete peace of mind from day one to the day we hand the keys back.</p>
+        </div>
+        <div class="why-card" role="listitem">
+          <div class="why-card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Years of Local Experience</h3>
+          <p>We've been getting our hands dirty in Tipperary for years. We know the ground conditions, the rainfall patterns, the planning considerations, and the expectations of Tipperary homeowners — local knowledge that no out-of-county contractor can match.</p>
+        </div>
+        <div class="why-card" role="listitem">
+          <div class="why-card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>One Team, Start to Finish</h3>
+          <p>No subcontractors, no handoffs, no excuses. The same team that quotes your job does the groundworks, lays the surface, and signs it off. That means accountability at every stage and a finished driveway we're genuinely proud to put our name to.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       6. FAQ
+  ══════════════════════════════ -->
+  <section class="driveways-faq" aria-labelledby="faq-heading">
+    <div class="faq-inner">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="section-title" id="faq-heading">Driveways Tipperary — Frequently Asked Questions</h2>
+      <p class="faq-intro">Everything you want to know before you pick up the phone. Can't find your answer here? <a href="/contact/" style="color:var(--pd-accent);font-weight:700;">Drop us a message</a> and we'll get straight back to you.</p>
+      <div class="faq-list" role="list">
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
+            What types of driveways do you install in Tipperary?
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+            <p>We install a full range of driveway surfaces across County Tipperary, including resin bound, tarmac (asphalt), block paving, concrete, and decorative gravel or stone driveways. During your free consultation we'll help you choose the best surface for your budget, property style, and ground conditions.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
+            How long does a new driveway take to install?
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+            <p>Most residential driveways are completed within 1–4 days, depending on the size, surface type, and the extent of any groundworks required. Resin and tarmac driveways tend to be quicker, while block paving or concrete driveways with complex patterns or major ground preparation can take a little longer. We'll give you a realistic timeframe in your quote.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
+            Do I need planning permission for a new driveway in Ireland?
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+            <p>In most cases, replacing or upgrading a driveway in front of a house does not require planning permission in Ireland, provided the surface is permeable or water is directed to a soakaway or drainage system on the property. SuDS-compliant surfaces like resin bound aggregate are especially well suited. If your property is in a protected structure or an Architectural Conservation Area, you should check with Tipperary County Council first. We're happy to advise.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
+            How much does a new driveway cost in Tipperary?
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+            <p>Driveway costs vary considerably depending on size, surface type, access, existing ground conditions, and drainage requirements. Gravel is typically the most affordable option, tarmac and concrete sit in the mid-range, and resin bound or block paving tend to carry a higher price per square metre due to the skill and materials involved. The best way to get an accurate figure is to request your free no-obligation quote from us.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">
+            Is a resin bound driveway a good choice in Tipperary?
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+            <p>Resin bound driveways are one of the most popular choices in Tipperary and across Ireland right now. They're fully permeable, highly durable, low maintenance, and available in a wide range of aggregate colours and finishes that complement both modern and traditional homes. They also meet SuDS planning requirements, making them a practical as well as attractive option.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">
+            How long will my new driveway last?
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">
+            <p>With proper installation and basic maintenance, a quality driveway should last many years. Resin bound and block paving driveways are known for their longevity when professionally installed on a well-prepared sub-base. Tarmac driveways are also very durable and can be resealed to extend their life further. We focus on getting the sub-base right — that's what makes the real difference to how long any driveway lasts.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a7" id="faq-q7">
+            Do you handle drainage and groundworks as part of the driveway installation?
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-a7" role="region" aria-labelledby="faq-q7">
+            <p>Absolutely. As a full groundworks and driveway contractor, we handle everything in-house — from excavation and sub-base preparation to drainage, kerbing, edging, and the finished surface. You don't need to hire multiple contractors. We assess drainage requirements as part of every site visit and ensure water is managed correctly from the outset.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a8" id="faq-q8">
+            Do you offer a guarantee on your driveway work?
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-a8" role="region" aria-labelledby="faq-q8">
+            <p>Yes. We stand over everything we install. Should any issues arise from our workmanship, we'll come back and sort it — no arguments. We'll always be clear about what's covered before work begins. Our reputation in Tipperary is built on finishing jobs properly the first time.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a9" id="faq-q9">
+            Are you fully insured?
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-a9" role="region" aria-labelledby="faq-q9">
+            <p>Yes, Tipperary Groundworks is fully insured for public liability and employer's liability. You can have complete peace of mind that any work carried out on your property is properly covered.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a10" id="faq-q10">
+            What areas of Tipperary do you cover for driveway installation?
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-a10" role="region" aria-labelledby="faq-q10">
+            <p>We cover all of County Tipperary, including Tipperary Town, Clonmel, Nenagh, Thurles, Carrick-on-Suir, Cahir, Roscrea, Templemore, Cashel, and Newport, plus the surrounding rural areas. If you're unsure whether we cover your area, just give us a call or drop us an email.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a11" id="faq-q11">
+            How do I get a quote for a driveway in Tipperary?
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" id="faq-a11" role="region" aria-labelledby="faq-q11">
+            <p>Getting a quote is simple and completely free. You can call us directly on <a href="tel:+353873566934" style="color:var(--pd-accent);font-weight:700;">+353 87 356 6934</a>, email us at <a href="mailto:tipperarygroundworks@gmail.com" style="color:var(--pd-accent);font-weight:700;">tipperarygroundworks@gmail.com</a>, or fill in the quick quote form on this page. We'll arrange a convenient time to visit, assess the site, and give you a clear, itemised, no-obligation quote — usually within a day or two.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       7. TESTIMONIALS
+  ══════════════════════════════ -->
+  <section class="driveways-testimonials" aria-labelledby="testimonials-heading">
+    <div class="testimonials-inner">
+      <p class="eyebrow">What Our Customers Say</p>
+      <h2 class="section-title light" id="testimonials-heading">Real Reviews from Tipperary</h2>
+      <div class="testimonials-grid" role="list">
+
+        <div class="testi-card" role="listitem">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testi-text">"Kevin and the team were brilliant to deal with, very professional job with updates throughout. We are delighted with the new outdoor space!"</p>
+          <p class="testi-author">— Kimberly, Tipperary</p>
+        </div>
+
+        <div class="testi-card" role="listitem">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testi-text">"Tipperary Groundworks are the best. Dealing remotely with Kevin and his company were so professional, clear communication with lots of photos of the work at all stages was fantastic. I highly recommend this company."</p>
+          <p class="testi-author">— Gary, Tipperary</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       8. AREAS SERVED
+  ══════════════════════════════ -->
+  <section class="driveways-areas" aria-labelledby="areas-heading">
+    <div class="areas-inner">
+      <p class="eyebrow">Areas We Cover</p>
+      <h2 class="section-title" id="areas-heading">Driveway Installations Across County Tipperary</h2>
+      <p class="areas-text">We're based in Tipperary and proud to serve the full county — towns, villages, and rural properties alike. Whether you're in Clonmel to the south, Nenagh to the north, or anywhere in between, our team will come to you for a free site visit and quote. No call-out charge, no travel surcharge — just straightforward, locally delivered service across all of Co. Tipperary. If you're in the county and you need a new driveway, we want to hear from you.</p>
+      <nav class="area-chips" aria-label="Towns and areas served in Tipperary">
+        <a href="/contact/" class="area-chip">Tipperary Town</a>
+        <a href="/contact/" class="area-chip">Clonmel</a>
+        <a href="/contact/" class="area-chip">Nenagh</a>
+        <a href="/contact/" class="area-chip">Thurles</a>
+        <a href="/contact/" class="area-chip">Carrick-on-Suir</a>
+        <a href="/contact/" class="area-chip">Cahir</a>
+        <a href="/contact/" class="area-chip">Roscrea</a>
+        <a href="/contact/" class="area-chip">Templemore</a>
+        <a href="/contact/" class="area-chip">Cashel</a>
+        <a href="/contact/" class="area-chip">Newport</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       QUOTE FORM
+  ══════════════════════════════ -->
+  <section class="driveways-quote" aria-labelledby="quote-heading">
+    <div class="quote-inner">
+      <p class="eyebrow">Free Quote</p>
+      <h2 class="section-title" id="quote-heading">Get Your Free Driveway Quote Today</h2>
+      <p style="color:#57534e;font-size:1rem;line-height:1.65;margin-top:0.5rem;">Fill in the form below and we'll be in touch quickly to arrange your free no-obligation site visit. Or call us directly on <a href="tel:+353873566934" style="color:var(--pd-accent);font-weight:700;">+353 87 356 6934</a>.</p>
+      <form class="quote-form" name="quote-driveways" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="quote-driveways">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div class="form-row two-col">
+          <div class="form-group">
+            <label for="driveways-name">Your Name</label>
+            <input type="text" id="driveways-name" name="name" placeholder="e.g. Séan Murphy" required>
+          </div>
+          <div class="form-group">
+            <label for="driveways-phone">Phone Number</label>
+            <input type="tel" id="driveways-phone" name="phone" placeholder="e.g. 087 123 4567" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="driveways-email">Email Address</label>
+            <input type="email" id="driveways-email" name="email" placeholder="e.g. sean@example.ie" required>
+          </div>
+        </div>
+        <div class="form-row two-col">
+          <div class="form-group">
+            <label for="driveways-service">Surface Type</label>
+            <select id="driveways-service" name="service" required>
+              <option value="" disabled selected>Select a surface type</option>
+              <option value="resin-bound">Resin Bound</option>
+              <option value="tarmac">Tarmac</option>
+              <option value="block-paving">Block Paving</option>
+              <option value="concrete">Concrete</option>
+              <option value="gravel">Gravel / Decorative Stone</option>
+              <option value="unsure">Not Sure — Need Advice</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="driveways-town">Your Town / Area</label>
+            <input type="text" id="driveways-town" name="town" placeholder="e.g. Clonmel" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="driveways-message">Tell Us More (optional)</label>
+            <textarea id="driveways-message" name="message" placeholder="Rough size, current surface, any drainage concerns..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="form-submit">Send My Free Quote Request</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       CTA BAND
+  ══════════════════════════════ -->
+  <div class="cta-band" role="complementary" aria-label="Call to action">
+    <h2>Ready to Transform Your Driveway?</h2>
+    <p>Fast free quotes. Local team. No-nonsense service across all of County Tipperary.</p>
+    <div class="cta-band-btns">
+      <a href="/contact/" class="btn-white">Get a Free Quote</a>
+      <a href="tel:+353873566934" class="btn btn-outline" style="color:var(--pd-white);border-color:var(--pd-white);">&#9742; +353 87 356 6934</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  (function () {
+    var items = document.querySelectorAll('.tipperary-groundworks-driveways .faq-item');
+    items.forEach(function (item) {
+      var btn = item.querySelector('.faq-question');
+      btn.addEventListener('click', function () {
+        var isOpen = item.classList.contains('open');
+        items.forEach(function (i) {
+          i.classList.remove('open');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    var anchors = document.querySelectorAll('.tipperary-groundworks-driveways a[href^="#"]');
+    anchors.forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  })();
+</script>
+
+{% endblock %}

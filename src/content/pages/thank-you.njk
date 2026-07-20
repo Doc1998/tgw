@@ -1,0 +1,499 @@
+---
+title: 'Thank You | Tipperary Groundworks'
+description: 'Thank you for getting in touch with Tipperary Groundworks. We have received your enquiry and will be in touch shortly.'
+preloadImg: '/assets/images/thank-you-hero.jpg'
+permalink: '/thank-you/'
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<style>
+  :root {
+    --pd-primary: #292524;
+    --pd-accent: #B45309;
+    --pd-light: #F5F0E8;
+    --pd-white: #ffffff;
+    --pd-font-display: 'Barlow Condensed', sans-serif;
+    --pd-font-body: 'Barlow', sans-serif;
+  }
+
+  .tipperary-groundworks-thank-you *,
+  .tipperary-groundworks-thank-you *::before,
+  .tipperary-groundworks-thank-you *::after {
+    box-sizing: border-box;
+  }
+
+  .tipperary-groundworks-thank-you {
+    font-family: var(--pd-font-body);
+    color: var(--pd-primary);
+    background: var(--pd-white);
+  }
+
+  /* ── HERO ── */
+  .tipperary-groundworks-thank-you .ty-hero {
+    position: relative;
+    background: var(--pd-primary);
+    overflow: hidden;
+    padding: 80px 16px 90px;
+    text-align: center;
+  }
+
+  .tipperary-groundworks-thank-you .ty-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    background: var(--pd-white);
+    clip-path: polygon(0 100%, 100% 100%, 100% 0);
+  }
+
+  .tipperary-groundworks-thank-you .ty-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('/assets/images/thank-you-hero.jpg') center center / cover no-repeat;
+    opacity: 0.18;
+  }
+
+  .tipperary-groundworks-thank-you .ty-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .tipperary-groundworks-thank-you .ty-eyebrow {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    border-left: 4px solid var(--pd-accent);
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  .tipperary-groundworks-thank-you .ty-hero h1 {
+    font-family: var(--pd-font-display);
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--pd-white);
+    line-height: 1.1;
+    margin: 0 0 18px;
+  }
+
+  .tipperary-groundworks-thank-you .ty-hero p {
+    font-size: 1.1rem;
+    color: #e5e0d8;
+    margin: 0 auto;
+    max-width: 520px;
+    line-height: 1.6;
+  }
+
+  /* ── CONFIRMATION CARD ── */
+  .tipperary-groundworks-thank-you .ty-confirm {
+    background: var(--pd-white);
+    padding: 60px 16px;
+  }
+
+  .tipperary-groundworks-thank-you .ty-confirm-inner {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .tipperary-groundworks-thank-you .ty-card {
+    border: 2px solid var(--pd-light);
+    border-top: 4px solid var(--pd-accent);
+    border-radius: 4px;
+    padding: 36px 28px;
+    background: var(--pd-light);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+
+  .tipperary-groundworks-thank-you .ty-card .check-icon {
+    font-size: 2.8rem;
+    margin-bottom: 14px;
+    display: block;
+    color: var(--pd-accent);
+  }
+
+  .tipperary-groundworks-thank-you .ty-card h2 {
+    font-family: var(--pd-font-display);
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--pd-primary);
+    margin: 0 0 14px;
+  }
+
+  .tipperary-groundworks-thank-you .ty-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4a4542;
+    margin: 0 0 12px;
+  }
+
+  .tipperary-groundworks-thank-you .ty-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .tipperary-groundworks-thank-you .ty-card strong {
+    color: var(--pd-primary);
+  }
+
+  /* ── WHAT HAPPENS NEXT ── */
+  .tipperary-groundworks-thank-you .ty-next {
+    background: var(--pd-primary);
+    padding: 60px 16px 80px;
+    clip-path: polygon(0 0, 100% 20px, 100% 100%, 0 100%);
+    margin-top: -2px;
+  }
+
+  .tipperary-groundworks-thank-you .ty-next-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .tipperary-groundworks-thank-you .ty-next .section-label {
+    font-family: var(--pd-font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--pd-accent);
+    border-left: 4px solid var(--pd-accent);
+    padding-left: 10px;
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+
+  .tipperary-groundworks-thank-you .ty-next h2 {
+    font-family: var(--pd-font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--pd-white);
+    margin: 0 0 36px;
+  }
+
+  .tipperary-groundworks-thank-you .steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tipperary-groundworks-thank-you .step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-left: 4px solid var(--pd-accent);
+    border-radius: 4px;
+    padding: 22px 20px;
+  }
+
+  .tipperary-groundworks-thank-you .step-num {
+    font-family: var(--pd-font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--pd-accent);
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: 44px;
+  }
+
+  .tipperary-groundworks-thank-you .step-body h3 {
+    font-family: var(--pd-font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--pd-white);
+    margin: 0 0 6px;
+  }
+
+  .tipperary-groundworks-thank-you .step-body p {
+    font-size: 0.95rem;
+    color: #c9c2b8;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ── TESTIMONIAL ── */
+  .tipperary-groundworks-thank-you .ty-testimonial {
+    background: var(--pd-light);
+    padding: 60px 16px;
+  }
+
+  .tipperary-groundworks-thank-you .ty-testimonial-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .tipperary-groundworks-thank-you .stars {
+    color: #FBBF24;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  .tipperary-groundworks-thank-you .testimonial-quote {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: #4a4542;
+    font-style: italic;
+    margin: 0 0 16px;
+    position: relative;
+  }
+
+  .tipperary-groundworks-thank-you .testimonial-quote::before {
+    content: '"';
+    font-family: var(--pd-font-display);
+    font-size: 3rem;
+    color: var(--pd-accent);
+    line-height: 0;
+    vertical-align: -0.5em;
+    margin-right: 4px;
+  }
+
+  .tipperary-groundworks-thank-you .testimonial-author {
+    font-family: var(--pd-font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--pd-primary);
+  }
+
+  /* ── CTA BAND ── */
+  .tipperary-groundworks-thank-you .ty-cta {
+    background: var(--pd-accent);
+    padding: 56px 16px;
+    text-align: center;
+    clip-path: polygon(0 20px, 100% 0, 100% 100%, 0 100%);
+    margin-top: -2px;
+  }
+
+  .tipperary-groundworks-thank-you .ty-cta-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .tipperary-groundworks-thank-you .ty-cta h2 {
+    font-family: var(--pd-font-display);
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--pd-white);
+    margin: 0 0 12px;
+  }
+
+  .tipperary-groundworks-thank-you .ty-cta p {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.88);
+    margin: 0 0 28px;
+    line-height: 1.6;
+  }
+
+  .tipperary-groundworks-thank-you .cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+
+  .tipperary-groundworks-thank-you .btn {
+    display: inline-block;
+    font-family: var(--pd-font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 14px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    border: 2px solid transparent;
+  }
+
+  .tipperary-groundworks-thank-you .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  .tipperary-groundworks-thank-you .btn-white {
+    background: var(--pd-white);
+    color: var(--pd-accent);
+    border-color: var(--pd-white);
+  }
+
+  .tipperary-groundworks-thank-you .btn-outline-white {
+    background: transparent;
+    color: var(--pd-white);
+    border-color: var(--pd-white);
+  }
+
+  .tipperary-groundworks-thank-you .btn-outline-white:hover {
+    background: var(--pd-white);
+    color: var(--pd-accent);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (min-width: 768px) {
+    .tipperary-groundworks-thank-you .ty-hero h1 {
+      font-size: 3.8rem;
+    }
+
+    .tipperary-groundworks-thank-you .steps-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .tipperary-groundworks-thank-you .ty-card {
+      padding: 44px 40px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .tipperary-groundworks-thank-you .ty-hero {
+      padding: 110px 16px 120px;
+    }
+
+    .tipperary-groundworks-thank-you .ty-hero h1 {
+      font-size: 4.5rem;
+    }
+
+    .tipperary-groundworks-thank-you .steps-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tipperary-groundworks-thank-you .btn {
+      transition: none;
+    }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Thank You | Tipperary Groundworks",
+  "description": "Thank you for contacting Tipperary Groundworks. We have received your enquiry and will be in touch shortly.",
+  "url": "https://tipperarygroundworks.ie/thank-you/",
+  "inLanguage": "en-IE",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Tipperary Groundworks",
+    "url": "https://tipperarygroundworks.ie"
+  },
+  "publisher": {
+    "@type": "LocalBusiness",
+    "name": "Tipperary Groundworks",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tipperary",
+      "addressCountry": "IE"
+    },
+    "telephone": "+353873566934",
+    "email": "tipperarygroundworks@gmail.com"
+  }
+}
+</script>
+
+<div class="tipperary-groundworks-thank-you">
+
+  <!-- HERO -->
+  <section class="ty-hero" aria-labelledby="ty-hero-heading">
+    <div class="ty-hero-bg" role="presentation" aria-hidden="true"></div>
+    <div class="ty-hero-inner">
+      <span class="ty-eyebrow">Enquiry Received</span>
+      <h1 id="ty-hero-heading">Thank You For Getting In Touch</h1>
+      <p>Your message has landed safely with us. We'll be back to you shortly with a fast, no-obligation quote.</p>
+    </div>
+  </section>
+
+  <!-- CONFIRMATION CARD -->
+  <section class="ty-confirm" aria-label="Enquiry confirmation">
+    <div class="ty-confirm-inner">
+      <div class="ty-card">
+        <span class="check-icon" aria-hidden="true">✔</span>
+        <h2>We've Got Your Enquiry</h2>
+        <p>Thanks for reaching out to <strong>Tipperary Groundworks</strong>. We've received your details and Kevin will be in touch with you very soon — usually within a few hours during business hours.</p>
+        <p>In the meantime, feel free to give us a call directly on <strong><a href="tel:+353873566934" style="color: var(--pd-accent); text-decoration: none;">+353 87 356 6934</a></strong> if your project is urgent or you'd prefer to chat straight away.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT HAPPENS NEXT -->
+  <section class="ty-next" aria-labelledby="ty-next-heading">
+    <div class="ty-next-inner">
+      <span class="section-label">What Happens Next</span>
+      <h2 id="ty-next-heading">Here's How It Works</h2>
+      <div class="steps-grid">
+        <div class="step-item">
+          <div class="step-num" aria-hidden="true">01</div>
+          <div class="step-body">
+            <h3>We Review Your Enquiry</h3>
+            <p>Kevin goes through every enquiry personally. No call centres, no middlemen — just straight-talking, honest advice.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num" aria-hidden="true">02</div>
+          <div class="step-body">
+            <h3>Free On-Site Quote</h3>
+            <p>We'll arrange a convenient time to visit, assess the job, and give you a clear, detailed quote — completely free of charge.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num" aria-hidden="true">03</div>
+          <div class="step-body">
+            <h3>We Get The Job Done</h3>
+            <p>Once you're happy to proceed, we schedule your project and keep you updated every step of the way with photos and progress updates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="ty-testimonial" aria-label="Customer testimonial">
+    <div class="ty-testimonial-inner">
+      <span class="stars" aria-label="5 stars out of 5">★★★★★</span>
+      <p class="testimonial-quote">Kevin and the team were brilliant to deal with, very professional job with updates throughout. We are delighted with the new outdoor space!</p>
+      <span class="testimonial-author">— Kimberly, Tipperary</span>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="ty-cta" aria-label="Call to action">
+    <div class="ty-cta-inner">
+      <h2>While You Wait — Explore Our Work</h2>
+      <p>Driveways, patios, groundworks, pipe laying — take a look at what we can do for your home or site across Tipperary.</p>
+      <div class="cta-buttons">
+        <a href="/services/" class="btn btn-white">View Our Services</a>
+        <a href="/contact/" class="btn btn-outline-white">Back to Contact</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+{% endblock %}
